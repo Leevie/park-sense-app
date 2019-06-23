@@ -1,10 +1,16 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import Navbar from "./components/Nav/index";
+import Jumbotron from "./components/Jumbotron/index";
+import Review from "./components/Review/index";
+import Preview from "./components/Preview/index"
 function App() {
   return (
     <div className="App">
+      <Navbar> </Navbar>
+      <Jumbotron></Jumbotron>
+      <Review></Review>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -35,6 +41,7 @@ function App() {
         })
         .then(response => console.log(response))}
         >Click Me</button>
+        
       </header>
     </div>
   );
