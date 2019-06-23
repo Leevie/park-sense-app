@@ -13,7 +13,7 @@ Components:
             -See parks by area button
             -See parks by popularity button
 
-    -Card #1 ----> NOT SURE IF A CARD IS THE BEST WAY TO GO ABOUT THIS?
+    -Card #1 ----> div
         -Review parks by age buttons
             -All ages 
             -Age 2-4 
@@ -22,39 +22,23 @@ Components:
             -Age 10-12 
             -Age 13+ 
 
-    -Card #2 ----> This card will contain "sneak peak" PICTURES of rated parks
+    -Card #2 ----> This card will contain thumbnails of rated parks
         -When hovered over show...
-            -Name ofthe park ----> Link to the movie page. When hovered over, turns blue.
-            -Appropriate age
+            -Name ofthe park ----> Link to the movie page. turns blue when hovered over.
+            -Appropriate age rating
             -Star rating
-            -Brief description of parks
------------------------------------------------------------------------------------------
-   // -Card #3 ----> ICE BOX(?)
-        -"Editors Top Choices"
-        -Pics
-   //
------------------------------------------------------------------------------------------
-   // -Card #4 ----> ICE BOX(?)
-        -"Parents Top Choices"
-        -Pics
-   //
------------------------------------------------------------------------------------------
-   // -Card #5 ----> ICE BOX(?)
-        -Personalize "Park App for your family"
-        -How many kids/kids ages
-   //
------------------------------------------------------------------------------------------
-    -Drop down menu (for mobile responsive)
+            -Brief description of park
 
-    -Member sign in card
+
+    -Card #3 ----> Member sign in
         -Enter username/email(?)
         -Enter password
         -Reset Password
+        -Create account ----> links to create account div
 
-    -New user sign up
+*AUTHENTICATION/VALIDATION REQUIREMENT!!
+
         -Create new account
-
-            -I'm an adult
                 -Enter username
                 -Enter password
                 -Password confirmation
@@ -63,16 +47,16 @@ Components:
                 -Kids ages(?)
                 -Filters(?)---Ice box
 
-            -I'm a teen
-                -Enter username
-                -Enter password
-                -Password confirmation
-                -age
+Ice Box
+    -Card #4 
+        -"Editors Top Choices"
+        -Pics
 
-            -I'm a kid
-                -Enter username
-                -Enter password
-                -Password confirmation
-                -age
-            
+    -Card #5
+        -"Parents Top Choices"
+        -Pics
+ 
+    *Mobile responsive
+
+   
   
