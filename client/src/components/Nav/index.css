@@ -1,0 +1,14 @@
+.login{
+    margin: 5px;
+
+    padding: 10px;
+    position: relative;
+    left: 25%;
+}
+.signup{
+    position: relative;
+    left: 1%;
+    margin: 5px;
+
+    padding: 10px;
+}

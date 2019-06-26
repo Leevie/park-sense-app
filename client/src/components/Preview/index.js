@@ -1,18 +1,26 @@
 import React from "react";
 import "./style.css"
 
-function Preview(){
-    return(
-        <div>
-            <img>Picture of the park</img>
-        <p>Name of the park</p>
-        <a>Link to the park page</a>
+function Preview(props) {
+    return (
+        <ul>
+            <li>
+                {/* <img src="" alt="park">Picture of the park</img> */}
+                <p>Name of the park</p>
+                <a
+                    className="App-link"
+                    href="/:id"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Link to the park page
+        </a>
+                <p>Brief description of parks</p>
+                <p>Appropriate Age</p>
+                <p>Star Rating</p>
+            </li>
+        </ul>
 
-</div>
     );
 }
 export default Preview;
--Name ofthe park ----> Link to the movie page. When hovered over, turns blue.
-            -Appropriate age
-            -Star rating
-            -Brief description of parks
