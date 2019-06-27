@@ -38,7 +38,7 @@ let ParkSchema = new Schema({
     // Image of the park
     image: {
         type: Buffer,
-        require: true
+        required: true
     },
     // Array of object ids containing park features
     features: [

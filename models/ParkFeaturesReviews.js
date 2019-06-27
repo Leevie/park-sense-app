@@ -34,7 +34,7 @@ let ParkFeaturesReviewsSchema = new Schema({
 });
 
 // Set up model
-let ParkReviews = mongoose.model("ParkFeaturesReviews", ParkFeaturesReviewsSchema);
+let ParkFeaturesReviews = mongoose.model("ParkFeaturesReviews", ParkFeaturesReviewsSchema);
 
 // Export
 module.exports = ParkFeaturesReviews;
