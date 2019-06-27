@@ -1,16 +1,25 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Navbar from "./components/Nav/index";
-import Jumbotron from "./components/Jumbotron/index";
-import Review from "./components/Review/index";
-import Preview from "./components/Preview/index"
+
+import Home from "./components/pages/Home";
+// import Login from "./components/Login";
+// import Signup from "./components/Signup";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <Navbar> </Navbar>
-      <Jumbotron></Jumbotron>
-      <Review></Review>
+        <Router>
+      <div>
+      
+        <Route exact path="/" component={Home} />
+        {/* <Route exact path="/saved" component={Saved} /> */}
+        {/* <Route exact path="/login" component={Login} />
+        <Route exact path="/signup" component={Signup} />
+        <Route path="/:id" component={Park} /> */}
+      </div>
+    </Router>
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
