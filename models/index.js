@@ -6,5 +6,4 @@ module.exports = {
     ParkFeaturesReviws: require("./ParkFeaturesReviews"),
     ParkReviews: require("./ParkReviews"),
     User: require("./User"),
-    SignUp: require("./signUp")
 };
