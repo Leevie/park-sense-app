@@ -10,11 +10,11 @@ function Thumbnail({
 {
   return (
     <div
-      className="thumbnail"
+      className="col-xs-4 sm-2 thumbnail"
       role="img"
       aria-label="Park Image"
       style={{
-        backgroundImage: `url(${src})`
+        backgroundImage: `url(${thumbnail})`
       }}
     />
   )};
