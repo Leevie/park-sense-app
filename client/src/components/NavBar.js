@@ -1,5 +1,5 @@
 import React from "react";
-import { Link} from "react-router-dom";
+
 function NavBar(props) {
   return (
     <ul className="nav nav-tabs">
@@ -21,16 +21,24 @@ function NavBar(props) {
           About
         </a>
       </li>
-      <li className="nav-item">
-      <Link to="/login" role="button" className="btn btn-link">
-        Login
-      </Link>
-      </li>
-      <li className="nav-item">
-      <Link to="/signup" role="button" className="btn btn-link">
-        Sign Up
-      </Link>
-      </li>
+      {/* <li className="nav-item">
+        <a
+          href="#blog"
+          onClick={() => props.handlePageChange("Blog")}
+          className={props.currentPage === "Blog" ? "nav-link active" : "nav-link"}
+        >
+          Blog
+        </a>
+      </li> */}
+      {/* <li className="nav-item">
+        <a
+          href="#contact"
+          onClick={() => props.handlePageChange("Contact")}
+          className={props.currentPage === "Contact" ? "nav-link active" : "nav-link"}
+        >
+          Contact
+        </a>
+      </li> */}
     </ul>
   );
 }

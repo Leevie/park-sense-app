@@ -1,11 +1,11 @@
 import React from "react";
 import "./style.css"
-
+import Thumbnail from "../Thumbnail";
 function Preview(props) {
     return (
         <ul>
             <li>
-                {/* <img src="" alt="park">Picture of the park</img> */}
+                <Thumbnail/>
                 <p>Name of the park</p>
                 <a
                     className="App-link"
