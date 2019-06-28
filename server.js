@@ -7,15 +7,12 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Serve up static assets (usually on heroku)
-
 app.use(express.static("client/build"));
 
 
 // Use apiRoutes
-app.post("/", (req, res) => {
-  return res.json({yo: "I am some data"})
-})
-
+var routes = require("./controllers/park_controller");
+app.use(routes);
 
 app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port http://localhost:${PORT} !`);
