@@ -11,7 +11,9 @@ export function Container({ fluid, children }) {
 export function Row({ fluid, children }) {
   return <div className={`row${fluid ? "-fluid" : ""}`}>{children}</div>;
 }
-
+export function Form({group, children}){
+  return <form className={`form${group ? "-group" : ""}`}>{children}</form>
+}
 // This Col component lets us size bootstrap columns with less syntax
 // e.g. <Col size="md-12"> instead of <div className="col-md-12">
 export function Col({ size, children }) {
