@@ -3,6 +3,7 @@ import Nav from "../Nav";
 import Jumbotron from "../Jumbotron";
 import Review from "../Review";
 import {Preview, PreviewItem} from "../Preview";
+import Footer from "../Footer";
 
 function Home() {
   return (
@@ -19,9 +20,9 @@ function Home() {
                         // ingredients={recipe.ingredients}
                         // thumbnail={recipe.thumbnail}
                       />
-                
         
     </Preview>
+    <Footer/>
     </div>
   );
 }
