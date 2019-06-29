@@ -2,6 +2,8 @@ import React from "react";
 import axios from "axios";
 // import "./Login.css";
 import {Animated} from "react-animated-css";
+import "./style.css";
+
 
 class Login extends React.Component {
 
@@ -98,13 +100,13 @@ class Login extends React.Component {
                                     <div className = 'd-inline'>
                                         <button 
                                             type="button" 
-                                            className="btn btn-secondary mr-5"
+                                            className="btn btn-secondary btn-success mr-5 signIn"
                                             onClick={(event)=>this.onSignIn(event)}
                                             >Sign In
                                         </button>
                                         <button 
                                             type="submit" 
-                                            className="btn btn-secondary"
+                                            className="btn btn-secondary btn-success register"
                                             >Register
                                         </button>
                                     </div>
