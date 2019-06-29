@@ -2,3 +2,24 @@
     border: solid black 2px;
     margin: 0 10px 0 10px;
 }
+
+.jumbotron{
+    background-color: green;
+    border: solid white 2px;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: bolder;
+   /* font-weight: 950; */
+}
+
+p{
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.button{
+    border: solid 10px;
+    background-color: white;
+}
