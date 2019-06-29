@@ -63,7 +63,7 @@ class Login extends React.Component {
         const {username, password} = this.state
 
         return (
-            <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
+          
             <div className="container">
                 <div className="row">
                     <div className="col-md-3"></div>
@@ -117,7 +117,7 @@ class Login extends React.Component {
                     <div className="col-md-3"></div>
                 </div>
             </div>
-            </Animated>
+            
         );
     };
 };
