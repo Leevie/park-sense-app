@@ -1,14 +1,15 @@
 import React from "react";
-import Nav from "../Nav";
+import NavBar from "../Nav";
 import Jumbotron from "../Jumbotron";
 import Review from "../Review";
 import {Preview, PreviewItem} from "../Preview";
 import Footer from "../Footer";
+// import NavBar from "../Nav";
 
 function Home() {
   return (
     <div>
-      <Nav/>
+      <NavBar/>
      <Jumbotron/>
     <Review/>
     <Preview>

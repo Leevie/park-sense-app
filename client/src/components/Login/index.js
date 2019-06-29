@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import NavBar from "../Nav";
 // import "./Login.css";
 import {Animated} from "react-animated-css";
 
@@ -62,6 +63,7 @@ class Login extends React.Component {
 
         return (
             <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
+            <NavBar/>
             <div className="container">
                 <div className="row">
                     <div className="col-md-3"></div>

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import NavBar from "../Nav";
 
 class SignUp extends Component {
   // Setting the initial values of this.state.username and this.state.password
@@ -27,6 +28,8 @@ class SignUp extends Component {
 
   render() {
     return (
+      <div>
+      <NavBar/>
       <form>
         <p>Username: {this.state.username}</p>
         <p>Password: {this.state.password}</p>
@@ -46,6 +49,7 @@ class SignUp extends Component {
         />
         <button onClick={this.handleFormSubmit}>Submit</button>
       </form>
+      </div>
     );
   }
 }
