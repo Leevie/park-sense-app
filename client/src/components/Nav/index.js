@@ -4,22 +4,14 @@ function NavBar(props) {
   return (
     <ul className="nav nav-tabs">
       <li className="nav-item">
-        <a
-          href="#home"
-          onClick={() => props.handlePageChange("Home")}
-          className={props.currentPage === "Home" ? "nav-link active" : "nav-link"}
-        >
+        <Link to="/" className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}>
           Home
-        </a>
+        </Link>
       </li>
       <li className="nav-item">
-        <a
-          href="#about"
-          onClick={() => props.handlePageChange("About")}
-          className={props.currentPage === "About" ? "nav-link active" : "nav-link"}
-        >
-          About
-        </a>
+      <Link to="/saved" className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}>
+          Saved
+        </Link>
       </li>
       <li className="nav-item">
       <Link to="/login" role="button" className="btn btn-link">

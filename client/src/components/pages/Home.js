@@ -20,7 +20,6 @@ function Home() {
                         // ingredients={recipe.ingredients}
                         // thumbnail={recipe.thumbnail}
                       />
-
         
     </Preview>
     <Footer/>
