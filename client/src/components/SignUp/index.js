@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import "./style.css";
+
 
 class SignUp extends Component {
   // Setting the initial values of this.state.username and this.state.password
