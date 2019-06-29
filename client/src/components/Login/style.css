@@ -1,0 +1,23 @@
+.form-group{
+    background-color: green;
+}
+
+.card-body{
+    background-color: black;
+    border: 10px solid green;
+}
+
+h2{
+    color: white;
+}
+
+.signIn{
+    color: white;
+    border:8px solid white;
+}
+
+.register{
+    color: white;
+    border:8px solid white;
+}
+
