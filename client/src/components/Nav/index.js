@@ -14,12 +14,12 @@ function NavBar(props) {
         </Link>
       </li>
       <li className="nav-item">
-      <Link to="/login" role="button" className="btn btn-link">
+      <Link to="/login" role="button" className={window.location.pathname === "/login" ? "nav-link active" : "nav-link"}>
         Login
       </Link>
       </li>
       <li className="nav-item">
-      <Link to="/signup" role="button" className="btn btn-link">
+      <Link to="/signup" role="button" className={window.location.pathname === "/signup" ? "nav-link active" : "nav-link"}>
         Sign Up
       </Link>
       </li>
