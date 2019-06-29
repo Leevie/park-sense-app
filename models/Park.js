@@ -1,4 +1,4 @@
-// Require mongoose
+// Require mongoose for model
 let mongoose = require("mongoose");
 
 // Use Schema from mongoose
