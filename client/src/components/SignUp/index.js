@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./style.css";
 import NavBar from "../Nav";
 
 class SignUp extends Component {

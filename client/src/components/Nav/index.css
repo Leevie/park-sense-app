@@ -1,6 +1,5 @@
 .login{
     margin: 5px;
-
     padding: 10px;
     position: relative;
     left: 25%;
@@ -9,6 +8,15 @@
     position: relative;
     left: 1%;
     margin: 5px;
-
     padding: 10px;
 }
+
+.navBar{
+    background-color:black;
+    padding: 50px;
+    
+}
+
+/* .nav-item{
+    background-color: white;
+} */

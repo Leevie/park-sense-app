@@ -4,6 +4,7 @@ import Jumbotron from "../Jumbotron";
 import Review from "../Review";
 import {Preview, PreviewItem} from "../Preview";
 import Footer from "../Footer";
+import "./style.css";
 // import NavBar from "../Nav";
 
 

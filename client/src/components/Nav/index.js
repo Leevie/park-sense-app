@@ -1,8 +1,10 @@
 import React from "react";
 import { Link} from "react-router-dom";
+import "./index.css";
+
 function NavBar(props) {
   return (
-    <ul className="nav nav-tabs">
+    <ul className="nav navBar">
       <li className="nav-item">
         <Link to="/" className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}>
           Home
