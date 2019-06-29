@@ -4,14 +4,15 @@ import "./index.css";
 
 function NavBar(props) {
   return (
+  
     <ul className="nav navBar">
       <li className="nav-item">
-        <Link to="/" className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}>
+        <Link to="/" role="button" className="btn btn-link">
           Home
         </Link>
       </li>
       <li className="nav-item">
-      <Link to="/saved" className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}>
+      <Link to="/saved"role="button" className="btn btn-link">
           Saved
         </Link>
       </li>
