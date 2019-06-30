@@ -6,20 +6,20 @@
 
 .jumbotron{
     background-color: green;
-    border: solid white 4px;
+    border: solid white 20px;
 }
 
-h1{
+/* .test1{
     font-size: 40px;
     font-weight: bolder;
-}
+} */
 
-
+/* 
 p{
     font-weight: bolder;
     font-size: 30px;
     color:black;
-}
+} */
 
 .button{
     border: solid 10px;
@@ -28,4 +28,10 @@ p{
 
 .btn{
     font-weight: bolder;
+}
+
+h1{
+    font-weight: bolder;
+    font-size: larger;
+    /* color: white; */
 }

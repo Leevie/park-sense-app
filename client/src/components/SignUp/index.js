@@ -27,10 +27,10 @@ class SignUp extends Component {
       <div className="container">
       <div className="row">
           <div className="col-md-3"></div>
-          <div className="col-md-6">
+          <div className="col-md-12">
               <div className="card">
                   <div className="card-body">
-                      <h2>Register An Account</h2>
+                      <h2 style={{fontWeight:'bolder', fontSize:'60px'}}>Register An Account</h2>
                       <form onSubmit={this.handleSubmit}>
                           <div className="form-group">
                               <label>Username:</label>
@@ -46,7 +46,7 @@ class SignUp extends Component {
                                />
                           </div>
                           <div className="form-group">
-                              <label>Password:</label>
+                              <label style={{fontWeight:'bolder'}}>Password:</label>
                               <input 
                               name="password"
                               type="password" 
