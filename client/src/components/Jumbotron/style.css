@@ -1,25 +1,14 @@
 
- #root > div > div.jumbotron.text-center > button{
+ /* #root > div > div.jumbotron.text-center > button{
     border: solid black 2px;
     margin: 0 10px 0 10px;
-}
+} */
 
 .jumbotron{
     background-color: green;
-    border: solid white 20px;
+    border: solid black 5px;
+    margin-left: 15px;
 }
-
-/* .test1{
-    font-size: 40px;
-    font-weight: bolder;
-} */
-
-/* 
-p{
-    font-weight: bolder;
-    font-size: 30px;
-    color:black;
-} */
 
 .button{
     border: solid 10px;

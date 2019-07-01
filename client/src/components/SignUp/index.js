@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./style.css";
+import Nav from "../Nav";
 
 
 class SignUp extends Component {
@@ -23,7 +24,8 @@ class SignUp extends Component {
 
   render() {
     return (
-
+<div>
+          <Nav/>
       <div className="container">
       <div className="row">
           <div className="col-md-3"></div>
@@ -33,7 +35,7 @@ class SignUp extends Component {
                       <h2 style={{fontWeight:'bolder', fontSize:'60px'}}>Register An Account</h2>
                       <form onSubmit={this.handleSubmit}>
                           <div className="form-group">
-                              <label>Username:</label>
+                              <label style = {{fontWeight:'bolder'}}>Username:</label>
                               <input 
                               name= "username"
                                type="text"
@@ -71,6 +73,7 @@ class SignUp extends Component {
           <div className="col-md-3"></div>
       </div>
   </div>
+</div>
   
     );
   };

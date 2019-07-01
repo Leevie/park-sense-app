@@ -1,8 +1,9 @@
 import React from "react";
 import axios from "axios";
 // import "./Login.css";
-import {Animated} from "react-animated-css";
+// import {Animated} from "react-animated-css";
 import "./style.css";
+import Nav from "../Nav";
 
 
 class Login extends React.Component {
@@ -63,7 +64,8 @@ class Login extends React.Component {
         const {username, password} = this.state
 
         return (
-          
+        <div>
+          <Nav/>
             <div className="container">
                 <div className="row">
                     <div className="col-md-3"></div>
@@ -117,6 +119,7 @@ class Login extends React.Component {
                     <div className="col-md-3"></div>
                 </div>
             </div>
+        </div>
             
         );
     };

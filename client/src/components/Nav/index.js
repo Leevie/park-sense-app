@@ -5,11 +5,11 @@ import "./index.css";
 
 function NavBar(props) {
   return (
-  
+  <div container-fluid>
     <ul className="nav navBar" style={{border: 'solid white', margin:'15px'}}>
       <li className="nav-item">
         <Link to="/" role="button" className="btn btn-link">
-        <h1 style={{ color: 'white', color:'green', fontSize:'30px'}}>Home</h1> 
+        <h1 style={{color:'green', fontSize:'30px'}}>Home</h1> 
         </Link>
       </li>
       <li className="nav-item">
@@ -28,6 +28,7 @@ function NavBar(props) {
       </Link>
       </li>
     </ul>
+  </div>
   );
 }
 
