@@ -6,7 +6,7 @@ import "./style.css";
 // The "role" and "aria label" are there to identify the element's purpose as an image for accessibility purposes
 function Thumbnail({ 
   src,
-  thumbnail = "https://placehold.it/300x300" })
+  thumbnail = "http://www.treeremovalbycir.com/images/cir_animacion_1.jpg?crc=4288209176" })
 {
   return (
     <div

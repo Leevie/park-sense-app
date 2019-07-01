@@ -4,3 +4,20 @@ ul{
 ul p{
     margin: 10px;
 }
+
+.box1{
+    background-color:black;
+}
+
+/* .box2{
+    background-color: red;
+} */
+
+/* "Link to the park page" white */
+h1{
+    font-size: 25px;
+}
+
+.test2{
+    border: solid yellow;
+}

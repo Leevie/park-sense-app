@@ -19,16 +19,16 @@ export function Preview({ children }) {
   }) {
     return (
         <ul>
-            <li className="list-group-item">
+            <li className="list-group-item box1">
             <Container>
                 <Row>
-                <Col size="xs-4 sm-2">
+                <Col size="lg-4 lg-6">
             <Thumbnail src={thumbnail} />
           </Col>
-          <Col size="xs-8 sm-9">
+          <Col size="lg-4 lg-4">
           <p>{title}</p>
           <a rel="noreferrer noopener" target="_blank" href={href}>
-              Link to the park page
+             <h1 style={{ color: 'white'}}>Link to the park page</h1> 
             </a>
                 <p>{summary}</p>
                 <p>{appropriateAge}</p>

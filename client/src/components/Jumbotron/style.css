@@ -1,29 +1,26 @@
-#root > div > div.jumbotron.text-center > button{
+
+ /* #root > div > div.jumbotron.text-center > button{
     border: solid black 2px;
     margin: 0 10px 0 10px;
-}
+} */
 
 .jumbotron{
     background-color: green;
-    border: solid white 4px;
-}
-
-h1{
-    font-size: 60px;
-    font-weight: bolder;
-   /* font-weight: 950; */
-}
-
-p{
-    font-weight: bolder;
-    font-size: 20px;
+    border: solid black 5px;
+    margin-left: 15px;
 }
 
 .button{
     border: solid 10px;
-    background-color: white;
+    background-color: black;
 }
 
 .btn{
     font-weight: bolder;
+}
+
+h1{
+    font-weight: bolder;
+    font-size: larger;
+    /* color: white; */
 }

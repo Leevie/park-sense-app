@@ -2,8 +2,9 @@ import React from "react";
 import axios from "axios";
 import NavBar from "../Nav";
 // import "./Login.css";
-import {Animated} from "react-animated-css";
+// import {Animated} from "react-animated-css";
 import "./style.css";
+import Nav from "../Nav";
 
 
 class Login extends React.Component {
@@ -64,18 +65,18 @@ class Login extends React.Component {
         const {username, password} = this.state
 
         return (
-            <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
-            <NavBar/>
+        <div>
+          <Nav/>
             <div className="container">
                 <div className="row">
                     <div className="col-md-3"></div>
-                    <div className="col-md-6">
+                    <div className="col-md-12">
                         <div className="card">
                             <div className="card-body">
-                                <h2>Login</h2>
+                                <h2 style={{fontWeight:'bolder', fontSize:'60px'}}>Login</h2>
                                 <form onSubmit={this.handleSubmit}>
                                     <div className="form-group">
-                                        <label>Username:</label>
+                                        <label style={{fontWeight:'bolder'}}>Username:</label>
                                         <input 
                                         name= "username"
                                          type="text"
@@ -88,7 +89,7 @@ class Login extends React.Component {
                                          />
                                     </div>
                                     <div className="form-group">
-                                        <label>Password:</label>
+                                        <label style={{fontWeight:'bolder'}}>Password:</label>
                                         <input 
                                         name="password"
                                         type="password" 
@@ -119,7 +120,8 @@ class Login extends React.Component {
                     <div className="col-md-3"></div>
                 </div>
             </div>
-            </Animated>
+        </div>
+            
         );
     };
 };
