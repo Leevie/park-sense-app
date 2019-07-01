@@ -1,4 +1,4 @@
-.login{
+/* .login{
     margin: 5px;
     padding: 10px;
     position: relative;
@@ -9,14 +9,28 @@
     left: 1%;
     margin: 5px;
     padding: 10px;
-}
+} */
+
+/* .saved{
+    position: relative;
+    left: 1%;
+    margin: 5px;
+    padding: 10px;
+} */
 
 .navBar{
     background-color:black;
-    padding: 50px;
+    padding: 30px;
+    border: solid white 4px;
     
 }
 
 /* .nav-item{
     background-color: white;
+    font-size: 50px;
 } */
+
+.btn{
+    color: green;
+    font-size: 30px;
+}

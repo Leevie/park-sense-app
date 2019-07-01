@@ -1,28 +1,25 @@
 // Dependencies
 var express = require("express");
-var mongojs = require("mongojs");
+var mongoose = require("mongoose");
+
+// Connection
+var conn = require("../config/connection");
 
 // Express router
 var router = express.Router();
 
-// Database configuration to use with mongojs
-var databaseUrl = "parkdb";
-var collection = ["parks"];
+// Connect to database
+mongoose.connect(conn, { useNewUrlParser: true })
 
-var db = mongojs(databaseUrl, collection);
-
-// Log errors to console
-db.on("error", function(err) {
-    console.log("Database Error:", err);
-});
+// Park model
+var park = require("../models/park");
 
 // Get all parks
 router.get("/api/parks", function(req, res) {
-    db.parks.find({}, function(err, data) {
+    park.find({}, function(err, data) {
         if (err) {
-            console.log("Error getting all parks:", err);
+            console.log("Error finding all parks:", err);
         } else {
-            console.log("Getting all parks!");
             res.json(data);
         }
     });
@@ -30,33 +27,55 @@ router.get("/api/parks", function(req, res) {
 
 // Get one park
 router.get("/api/parks/:id", function(req, res) {
-    db.parks.findOne({
-        _id: mongojs.ObjectID(req.params.id)
-    }, function(err, data) {
+    park.findById(req.params.id, function(err, data) {
         if (err) {
-            console.log("Error getting park id", req.params.id);
+            console.log(`Error finding park id ${req.params.id}:`, err);
         } else {
-            console.log("Retrieving Park ID:", req.params.id);
             res.json(data);
         }
     });
 });
 
-// Update park
+// Update park data
 router.put("/api/parks/:id", function(req, res) {
     var parkId = req.params.id;
     var bodyParkName = req.body.parkName;
     var bodyDescription = req.body.description;
-    console.log("the whole body:", req.body);
-    console.log("my update data:", bodyParkName, bodyDescription);
-    db.parks.findAndModify({
-        query: { _id: parkId },
-        update: { $set: { parkName: bodyParkName, description: bodyDescription }}
-    }, function(err, data, lastErrorObject) {
+    console.log("Body Data Received:", req.body);
+    park.findByIdAndUpdate(req.params.id, {
+        parkName: bodyParkName,
+        description: bodyDescription
+    }, { new: true, useFindAndModify: false }, function(err, data) {
         if (err) {
-            console.log("Error updating park id:", parkId, err);
+            console.log(`Error updating park id ${parkId}:`, err);
         } else {
-            console.log("Successfully updated park id:", parkId, data);
+            res.json(data);
+        }
+    });
+});
+
+// Add review to park
+router.put("/api/parks/addreview/:id", function(req, res) {
+    park.findByIdAndUpdate(req.params.id, {
+        $push: { reviews: mongoose.Types.ObjectId(req.body.id) }
+    }, { new: true, useFindAndModify: false }, function(err, data) {
+        if (err) {
+            console.log(`Cannot add review to park id ${req.params.id}:`, err);
+        } else {
+            res.json(data);
+        }
+    });
+});
+
+// Add feature to park
+router.put("/api/parks/addfeature/:id", function(req, res) {
+    park.findByIdAndUpdate(req.params.id, {
+        $push: { features: mongoose.Types.ObjectId(req.body.id) }
+    }, { new: true, useFindAndModify: false }, function(err, data) {
+        if (err) {
+            console.log(`Cannot add feature to park id ${req.params.id}:`, err);
+        } else {
+            res.json(data);
         }
     });
 });

@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import NavBar from "../Nav";
 // import "./Login.css";
 // import {Animated} from "react-animated-css";
 import "./style.css";
