@@ -11,8 +11,8 @@ app.use(express.static("client/build"));
 
 
 // Use apiRoutes
-var routes = require("./controllers/park_controller");
-app.use(routes);
+var router = require("./controllers");
+app.use(router);
 
 app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port http://localhost:${PORT} !`);
