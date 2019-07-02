@@ -68,7 +68,7 @@ class ReviewForm extends Component {
           <input
             className="form-control"
             type="text"
-            placeholder="title"
+            placeholder="Title"
             name="title"
             value={this.state.title}
             onChange={this.handleInputChange}
@@ -85,13 +85,13 @@ class ReviewForm extends Component {
             <input
               type="checkbox"
               className="form-check-input"
-              id="customCheck1"
+              id="inlineCheckbox1"
               name="swings"
               checked={this.state.features.isChecked}
               value={this.state.features.value}
               onClick={this.handleInputChange}
             />
-            <label className="form-check-label" htmlFor="customCheck1">Swings</label>
+            <label className="form-check-label" htmlFor="inlineCheckbox1">Swings</label>
 
             <input className="form-check-input"
               type="checkbox"
