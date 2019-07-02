@@ -1,9 +1,9 @@
 // Exporting an object containing all of our models
 
 module.exports = {
-    Park: require("./Park"),
-    ParkFeatures: require("./ParkFeatures"),
-    ParkFeaturesReviws: require("./ParkFeaturesReviews"),
-    ParkReviews: require("./ParkReviews"),
+    Park: require("./park"),
+    ParkFeatures: require("./parkfeatures"),
+    ParkFeaturesReviws: require("./parkfeaturesreviews"),
+    ParkReviews: require("./parkreviews"),
     User: require("./User")
 };
