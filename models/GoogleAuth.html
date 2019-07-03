@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="google-signin-client_id" content="657716144888-smrdrfufr0tttci076tinpp3apbh2ka6.apps.googleusercontent.com"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+</head>
+<body>
+    <div id="profileInfo"> </div>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+<script>
+
+function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  document.getElementById('profileInfo').innerHTML = profile.getName() + "<br>" + 
+  "<a href=mailto:'" + profile.getEmail() + "'>" + profile.getEmail() + "</a>" + "<br>"
+  + "<img src = '" + profile.getImageUrl() + "'/>";
+}
+
+</script>
+
+<a href="#" onclick="signOut();">Sign out</a>
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      document.getElementById('profileInfo').innerHTML = "";
+    });
+  }
+</script>
+
+
+</body>
+</html>

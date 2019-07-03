@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./style.css";
 import Nav from "../Nav";
 
-
 class SignUp extends Component {
   state = {
     username: "",

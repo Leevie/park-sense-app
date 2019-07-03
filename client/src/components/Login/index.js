@@ -4,7 +4,7 @@ import axios from "axios";
 // import {Animated} from "react-animated-css";
 import "./style.css";
 import Nav from "../Nav";
-
+import { Link} from "react-router-dom";
 
 class Login extends React.Component {
 
@@ -106,11 +106,9 @@ class Login extends React.Component {
                                             onClick={(event)=>this.onSignIn(event)}
                                             >Sign In
                                         </button>
-                                        <button 
-                                            type="submit" 
-                                            className="btn btn-secondary btn-success register"
-                                            >Register
-                                        </button>
+                                        <Link to="/signup" role="button" className="btn btn-secondary btn-success register">
+                                               Register
+                                            </Link>
                                     </div>
                                 </form>
                             </div>

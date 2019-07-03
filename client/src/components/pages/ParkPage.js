@@ -5,15 +5,14 @@ import Review from "../Review";
 import {Preview, PreviewItem} from "../Preview";
 import Footer from "../Footer";
 import "./style.css";
-// import NavBar from "../Nav";
 
 
-function Home() {
+function ParkPage() {
   return (
     <div>
       <NavBar/>
-     <Jumbotron/>
-    <Review/>
+     {/* <Jumbotron/> */}
+    {/* <Review/> */}
     <Preview>
 
                       <PreviewItem
@@ -30,4 +29,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default ParkPage;
