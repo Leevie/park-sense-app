@@ -1,0 +1,26 @@
+.mainBox{
+    border: solid 4px black;
+}
+
+/* .test1{
+    border: solid 10px red;
+    
+} */
+
+.custom-control-label{
+    margin-right: 18px;
+    border: transparent .5px white;
+}
+
+.browseFile{
+    border: solid 2px white;
+    /* margin-right: 10px; */
+    /* padding: 10px; */
+
+}
+
+.description{
+    /* padding: 40px; */
+    border: solid 2px white(226, 19, 19);
+}
+
