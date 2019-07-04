@@ -4,19 +4,11 @@
   "icons": [
     {
       "src": "favicon.ico",
-<<<<<<< HEAD
       "sizes": "192x192",
       "type": "image/png"
     }
   ],
   "start_url": "./index.html",
-=======
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    }
-  ],
-  "start_url": ".",
->>>>>>> bad1ac4867a41bd4bfd1d3fc93dd0e04af772946
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
