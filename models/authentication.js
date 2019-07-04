@@ -1,0 +1,2 @@
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content="657716144888-smrdrfufr0tttci076tinpp3apbh2ka6.apps.googleusercontent.com"></meta>
