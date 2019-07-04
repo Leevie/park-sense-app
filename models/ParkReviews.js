@@ -1,7 +1,7 @@
 // Require mongoose for model
 let mongoose = require("mongoose");
 
-// Schema
+// Schema for model
 let Schema = mongoose.Schema;
 
 // Define schema
