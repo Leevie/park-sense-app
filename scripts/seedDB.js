@@ -3,7 +3,6 @@ const db = require("../models");
 
 // Connect to database
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/parkdb", { useNewUrlParser: true });
-console.log(db.Park);
 
 // Park seeding
 const parkSeed = [
