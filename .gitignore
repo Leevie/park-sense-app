@@ -9,8 +9,7 @@
 /coverage
 
 # production
-################ Peter Note: removed for build to heroku
-# /build
+/build
 
 # misc
 .DS_Store
