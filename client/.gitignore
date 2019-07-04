@@ -9,11 +9,8 @@
 /coverage
 
 # production
-<<<<<<< HEAD
 ################ Peter Note: removed for build to heroku
 # /build
-=======
->>>>>>> bad1ac4867a41bd4bfd1d3fc93dd0e04af772946
 
 # misc
 .DS_Store

@@ -9,14 +9,10 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Serve up static assets (usually on heroku)
-<<<<<<< HEAD
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 app.use(routes);
-=======
-app.use(express.static("client/build"));
->>>>>>> bad1ac4867a41bd4bfd1d3fc93dd0e04af772946
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/parkdb", { useNewUrlParser: true });
 
