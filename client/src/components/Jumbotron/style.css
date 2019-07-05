@@ -5,9 +5,11 @@
 } */
 
 .jumbotron{
-    background-color: green;
-    border: solid black 5px;
-    margin-left: 15px;
+    background-color: orangered;
+    border: solid black 8px;
+    /* margin-left: 15px; */
+    padding:33px;
+    margin: 0 10px 0 10px;
 }
 
 .button{

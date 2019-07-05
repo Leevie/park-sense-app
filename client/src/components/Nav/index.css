@@ -20,8 +20,9 @@
 
 .navBar{
     background-color:black;
-    padding: 30px;
-    border: solid white 4px;
+    padding: 33px;
+    margin: 0 10px 0 10px;
+    /* border: solid white 4px; */
     
 }
 
@@ -31,6 +32,10 @@
 } */
 
 .btn{
-    color: green;
+    color: yellow;
     font-size: 30px;
+    border: solid 10px;
+    padding: 10px;
+    margin-left:50px;
+    
 }

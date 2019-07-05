@@ -6,7 +6,7 @@ import "./index.css";
 function NavBar(props) {
   return (
   <div container-fluid>
-    <ul className="nav navBar" style={{border: 'solid white', margin:'15px'}}>
+    <ul className="nav navBar" style={{border: 'solid 8px orangered'}}>
       <li className="nav-item">
         <Link to="/" role="button" className="btn btn-link">
         <h1 style={{color:'green', fontSize:'30px'}}>Home</h1> 

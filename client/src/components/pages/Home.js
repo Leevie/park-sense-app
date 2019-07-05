@@ -12,8 +12,12 @@ function Home() {
   return (
     <div>
       <NavBar/>
+      <br></br>
+      <br></br>
      <Jumbotron/>
+     <br></br>
     <Review/>
+    <br></br>
     <Preview>
 
                       <PreviewItem
@@ -25,6 +29,8 @@ function Home() {
                       />
         
     </Preview>
+   <br></br>
+    
     <Footer/>
     </div>
   );
