@@ -1,8 +1,10 @@
+// This will be the page seen when a park is clicked on.
+
 import React from "react";
 import NavBar from "../Nav";
 import Jumbotron from "../Jumbotron";
 import Review from "../Review";
-import {Preview, PreviewItem} from "../Preview";
+import {Preview, PreviewItem} from "../Preview/index";
 import Footer from "../Footer";
 import "./style.css";
 

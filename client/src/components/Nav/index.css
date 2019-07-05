@@ -20,10 +20,15 @@
 
 .navBar{
     background-color:black;
+
     padding: 33px;
     margin: 0 10px 0 10px;
-    /* border: solid white 4px; */
+
     flex-wrap: inherit;
+
+
+    border: solid white 4px;
+
     
 }
 
@@ -35,14 +40,14 @@
 /* .btn{
     color:gold;
     font-size: 30px;
-    border: solid 10px; */
-    /* padding: 10px; */
-    /* margin-left:5px;
-    flex-wrap: inherit;
+
     
 } */
 
 /* .navBtn{
     color:black;
 } */
+
+
+
 
