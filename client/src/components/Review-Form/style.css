@@ -1,19 +1,10 @@
 .mainBox{
-    border: solid 4px black;
-}
-
-/* .test1{
-    border: solid 10px red;
-    
-} */
-
-.custom-control-label{
-    margin-right: 18px;
-    border: transparent .5px white;
+    border: solid 8px orangered;
+    background-color:black;
 }
 
 .browseFile{
-    border: solid 2px white;
+    border: solid 1px black;
     /* margin-right: 10px; */
     /* padding: 10px; */
 
@@ -22,5 +13,33 @@
 .description{
     /* padding: 40px; */
     border: solid 2px white(226, 19, 19);
+}
+
+#swingCheckBox{
+    /* background-color: gold; */
+    padding: 10px;
+    
+}
+
+#slideCheckBox{
+    padding: 10px;
+    
+}
+
+
+#monkeyCheckBox{
+    padding: 10px;
+}
+
+#musicCheckBox{
+    padding: 10px;
+}
+
+.submitBtn{
+    border: solid 8px gold;
+}
+
+.box2{
+    border: solid 4px gold;
 }
 

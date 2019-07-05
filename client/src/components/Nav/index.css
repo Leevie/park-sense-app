@@ -20,9 +20,15 @@
 
 .navBar{
     background-color:black;
-    padding: 30px;
+
+    padding: 33px;
+    margin: 0 10px 0 10px;
+
+    flex-wrap: inherit;
+
+
     border: solid white 4px;
-    margin: 15px;
+
     
 }
 
@@ -31,11 +37,17 @@
     font-size: 50px;
 } */
 
-.btn{
-    color: green;
+/* .btn{
+    color:gold;
     font-size: 30px;
-}
 
-.nav-span{
-    font-size: 30px;
-}
+    
+} */
+
+/* .navBtn{
+    color:black;
+} */
+
+
+
+
