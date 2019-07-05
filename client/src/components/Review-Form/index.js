@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Nav from "../Nav";
+import NavBar from "../Nav";
 import {Container} from "../Grid";
 import Jumbotron from "../Jumbotron";
 import "./style.css";
@@ -43,14 +43,16 @@ class ReviewForm extends Component {
   render() {
     return (
         <Container>
-        <Nav/>
+        <NavBar/>
+        <br></br>
         <Jumbotron/>
-      <form className="form-group mainBox">
+        <br></br>
+      <form className="form-group mainBox container-fluid">
         <br></br>
         <input
         className="form-control"
           type="text"
-          placeholder="Title"
+          placeholder="Name of Park"
           name="title"
           value={this.state.title}
           onChange={this.handleInputChange}
@@ -73,18 +75,18 @@ class ReviewForm extends Component {
   value={this.state.features}
   onClickCapture={this.handleInputChange}
   />
-  <label className="control-label" for="customCheck1">Swings</label>
+  <label className="control-label" for="customCheck1" id="swingCheckBox" style={{color:'white', fontWeight:'bolder'}}>Swings</label>
+{/* <br></br>
 <br></br>
-<br></br>
-<br></br>
+<br></br> */}
   <input className="form-check-input" type="checkbox" id="inlineCheckbox2" value={this.state.features}onClickCapture={this.handleInputChange}/>
-  <label className="control-label" for="inlineCheckbox1">Slides</label>
+  <label className="control-label" for="inlineCheckbox2" id="slideCheckBox"style={{color:'white', fontWeight:'bolder'}}>Slides</label>
 
   <input className="form-check-input" type="checkbox" id="inlineCheckbox3" value={this.state.features}onClickCapture={this.handleInputChange}/>
-  <label className="control-label" for="inlineCheckbox3">Monkey Bar</label>
+  <label className="control-label" for="inlineCheckbox3" id="monkeyCheckBox"style={{color:'white', fontWeight:'bolder'}}>Monkey Bar</label>
 
   <input className="form-check-input" type="checkbox" id="inlineCheckbox4" value={this.state.features}onClickCapture={this.handleInputChange}/>
-  <label className="control-label" for="inlineCheckbox4">3 Music</label>
+  <label className="control-label" for="inlineCheckbox4" id="musicCheckBox"> Music</label>
 </div>
         <input
         className="form-control description"
@@ -109,7 +111,7 @@ class ReviewForm extends Component {
 </div>
 <br></br>
 <br></br>
-        <button onClick={this.handleFormSubmit}>Submit</button>
+        <button class="btn btn-dark submitBtn" onClick={this.handleFormSubmit}>Submit</button>
       </form>
       </Container>
     );
