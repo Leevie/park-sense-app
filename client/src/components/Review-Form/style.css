@@ -1,6 +1,6 @@
 .mainBox{
     border: solid 8px orangered;
-    background-color: black;
+    background-color:black;
 }
 
 .browseFile{
@@ -38,3 +38,8 @@
 .submitBtn{
     border: solid 8px gold;
 }
+
+.box2{
+    border: solid 4px gold;
+}
+

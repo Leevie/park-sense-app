@@ -51,7 +51,7 @@ class ReviewForm extends Component {
       <form className="form-group mainBox container-fluid">
         <br></br>
         <input
-        className="form-control"
+        className="form-control box2"
           type="text"
           placeholder="Name of Park"
           name="title"
@@ -60,7 +60,7 @@ class ReviewForm extends Component {
         />
         <br></br>
         <input
-        className="form-control"
+        className="form-control box2"
           type="text"
           placeholder="Location"
           name="location"
@@ -90,7 +90,7 @@ class ReviewForm extends Component {
   <label className="control-label" for="inlineCheckbox4" id="musicCheckBox"style={{color:'white', fontWeight:'bolder'}}> Music</label>
 </div>
         <input
-        className="form-control description"
+        className="form-control description box2"
         type="text"
         placeholder="Description"
         name="description"
@@ -100,7 +100,7 @@ class ReviewForm extends Component {
       <br>
       </br>
       <p>Upload Images</p>
-      <div className="custom-file uploadImages">
+      <div className="custom-file uploadImages box2">
   <input type="file"
   className="custom-file-input" 
   id="customFile"
