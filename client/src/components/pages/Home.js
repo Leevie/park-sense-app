@@ -13,11 +13,11 @@ function Home() {
     <div>
       <NavBar/>
       <br></br>
-      <br></br>
+    
      <Jumbotron/>
      <br></br>
     <Review/>
-    <br></br>
+    {/* <br></br> */}
     <Preview>
 
                       <PreviewItem
@@ -29,7 +29,7 @@ function Home() {
                       />
         
     </Preview>
-   <br></br>
+   {/* <br></br> */}
     
     <Footer/>
     </div>

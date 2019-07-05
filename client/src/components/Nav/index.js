@@ -6,24 +6,24 @@ import "./index.css";
 function NavBar(props) {
   return (
   <div container-fluid>
-    <ul className="nav navBar" style={{border: 'solid 8px orangered'}}>
+    <ul className="nav navBar" style={{border: 'double 20px gold'}}>
       <li className="nav-item">
-        <Link to="/" role="button" className="btn btn-link">
-        <h1 style={{color:'green', fontSize:'30px'}}>Home</h1> 
+        <Link to="/" role="button" className="btn btn-link navBtn">
+        <h1 style={{color:'gold', fontSize:'30px'}}>Home</h1> 
         </Link>
       </li>
       <li className="nav-item">
-      <Link to="/saved"role="button" className="btn btn-link">
+      <Link to="/saved"role="button" className="btn btn-link navBtn">
       <h1 style={{ color: 'white', fontSize:'30px'}}>Saved</h1>    
         </Link>
       </li>
       <li className="nav-item">
-      <Link to="/login" role="button" className="btn btn-link">
+      <Link to="/login" role="button" className="btn btn-link navBtn">
       <h1 style={{ color: 'white',fontSize:'30px'}}>Login</h1> 
       </Link>
       </li>
       <li className="nav-item">
-      <Link to="/signup" role="button" className="btn btn-link">
+      <Link to="/signup" role="button" className="btn btn-link navBtn">
       <h1 style={{ color: 'white', fontSize:'30px'}}>Sign Up</h1>  
       </Link>
       </li>

@@ -5,22 +5,22 @@ import "./style.css"
 function Review({ type = "default", className,onClick }) {
   return (
       <div style={{marginRight:'2%'}}>
-    <button onClick={onClick} className="btn btn-lg all button mr-3 btn-success">
+    <button onClick={onClick} className="btn btn-lg all button mr-5 btn-warning previewBtn">
         All ages 
     </button>
-    <button onClick={onClick} className="btn btn-lg twoFour button mr-3 btn-success">
+    <button onClick={onClick} className="btn btn-lg twoFour button mr-5 btn-warning previewBtn">
     Age 2-4  
     </button>
-    <button onClick={onClick} className="btn btn-lg fiveSeven button mr-3 btn-success">
+    <button onClick={onClick} className="btn btn-lg fiveSeven button mr-5 btn-warning previewBtn">
     Age 5-7  
     </button>
-    <button onClick={onClick} className="btn btn-lg eightNine button mr-3 btn-success">
+    <button onClick={onClick} className="btn btn-lg eightNine button mr-5 btn-warning previewBtn">
     Age 8-9  
     </button>
-    <button onClick={onClick} className="btn btn-lg tenTwelwe button mr-3 btn-success">
+    <button onClick={onClick} className="btn btn-lg tenTwelwe button mr-5 btn-warning previewBtn">
     Age 10-12
     </button>
-    <button onClick={onClick} className="btn btn-lg thirteen button mr-3 btn-success">
+    <button onClick={onClick} className="btn btn-lg thirteen button mr-5 btn-warning previewBtn">
     Age 13+
     </button>
     </div>

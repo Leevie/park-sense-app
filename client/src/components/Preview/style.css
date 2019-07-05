@@ -1,6 +1,6 @@
 ul{
     padding:8px;
-    margin-left: 12px;
+    /* margin-left: 12px; */
     
 }
 ul p{
@@ -9,7 +9,7 @@ ul p{
 
 .box1{
     background-color:navy;
-    border: solid 10px black;
+    border: double 20px gold;
     /* margin-left: 0px; */
     padding:33px;
     /* margin: 0 10px 0 10px; */
