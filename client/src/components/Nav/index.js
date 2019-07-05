@@ -5,26 +5,26 @@ import "./index.css";
 
 function NavBar(props) {
   return (
-  <div container-fluid>
-    <ul className="nav navBar" style={{border: 'solid white', margin:'15px'}}>
+    <div container-fluid>
+    <ul className="nav navBar justify-content-end">
       <li className="nav-item">
         <Link to="/" role="button" className="btn btn-link">
-        <h1 style={{color:'green', fontSize:'30px'}}>Home</h1> 
+        <span className= "nav-span" style={{color:window.location.pathname === "/" ? "green" : "white"}}>Home</span> 
         </Link>
       </li>
-      <li className="nav-item">
+      {/* <li className="nav-item">
       <Link to="/saved"role="button" className="btn btn-link">
-      <h1 style={{ color: 'white', fontSize:'30px'}}>Saved</h1>    
+      <span style={{ color: window.location.pathname === "/saved" ? "green" : "white", fontSize:'30px'}}>Saved</span>    
         </Link>
-      </li>
+      </li> */}
       <li className="nav-item">
       <Link to="/login" role="button" className="btn btn-link">
-      <h1 style={{ color: 'white',fontSize:'30px'}}>Login</h1> 
+      <span className= "nav-span" style={{ color: window.location.pathname === "/login" ? "green" : "white"}}>Login</span> 
       </Link>
       </li>
       <li className="nav-item">
       <Link to="/signup" role="button" className="btn btn-link">
-      <h1 style={{ color: 'white', fontSize:'30px'}}>Sign Up</h1>  
+      <span className= "nav-span" style={{ color: window.location.pathname === "/signup" ? "green" : "white"}}>Sign Up</span>  
       </Link>
       </li>
     </ul>
