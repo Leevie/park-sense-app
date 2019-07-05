@@ -8,7 +8,7 @@ function NavBar(props) {
   <div container-fluid>
     <ul className="nav navBar" style={{border: 'double 20px gold'}}>
       <li className="nav-item">
-        <Link to="/" role="button" className="btn btn-link navBtn">
+        <Link to="/" role="button" className="btn btn-link btn-warning">
         <h1 style={{color:'gold', fontSize:'30px'}}>Home</h1> 
         </Link>
       </li>
