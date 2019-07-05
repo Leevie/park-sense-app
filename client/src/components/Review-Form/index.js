@@ -42,7 +42,8 @@ class ReviewForm extends Component {
 
   render() {
     return (
-        <Container>
+        // <Container>
+        <div>
         <NavBar/>
         <br></br>
         <Jumbotron/>
@@ -86,7 +87,7 @@ class ReviewForm extends Component {
   <label className="control-label" for="inlineCheckbox3" id="monkeyCheckBox"style={{color:'white', fontWeight:'bolder'}}>Monkey Bar</label>
 
   <input className="form-check-input" type="checkbox" id="inlineCheckbox4" value={this.state.features}onClickCapture={this.handleInputChange}/>
-  <label className="control-label" for="inlineCheckbox4" id="musicCheckBox"> Music</label>
+  <label className="control-label" for="inlineCheckbox4" id="musicCheckBox"style={{color:'white', fontWeight:'bolder'}}> Music</label>
 </div>
         <input
         className="form-control description"
@@ -113,7 +114,8 @@ class ReviewForm extends Component {
 <br></br>
         <button class="btn btn-dark submitBtn" onClick={this.handleFormSubmit}>Submit</button>
       </form>
-      </Container>
+      {/* // </Container> */}
+      </div>
     );
   }
 }
