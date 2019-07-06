@@ -3,7 +3,7 @@
 module.exports = {
     Park: require("./park"),
     ParkFeatures: require("./parkfeatures"),
-    ParkFeaturesReviws: require("./parkfeaturesreviews"),
+    ParkFeaturesReviews: require("./parkfeaturesreviews"),
     ParkReviews: require("./parkreviews"),
     User: require("./user")
 };

@@ -2,7 +2,8 @@ const mongoose = require("mongoose");
 const db = require("../models");
 
 // Connect to database
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/parkdb", { useNewUrlParser: true });
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/parkdb", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://seeder:mypassword123@ds111258.mlab.com:11258/heroku_2qb48p72", { useNewUrlParser: true });
 
 // Data for park review
 const parkReviewSeed = [
