@@ -11,8 +11,8 @@ import "./style.css";
 function Home() {
   return (
     <div>
-      <NavBar/>
-     <Jumbotron/>
+    <NavBar/>
+    <Jumbotron/>
     <Review/>
     <PreviewTest/>
     <Footer/>
