@@ -5,19 +5,15 @@ import Review from "../Review";
 import {Preview, PreviewItem} from "../Preview/index";
 import Footer from "../Footer";
 import "./style.css";
-
+// import NavBar from "../Nav";
 
 
 function Home() {
   return (
     <div>
       <NavBar/>
-      <br></br>
-    
      <Jumbotron/>
-     <br></br>
     <Review/>
-    {/* <br></br> */}
     <Preview>
 
                       <PreviewItem
@@ -29,8 +25,6 @@ function Home() {
                       />
         
     </Preview>
-   {/* <br></br> */}
-    
     <Footer/>
     </div>
   );

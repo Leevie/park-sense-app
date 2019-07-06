@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import NavBar from "../Nav";
+import Nav from "../Nav";
 import {Container} from "../Grid";
 import Jumbotron from "../Jumbotron";
 import "./style.css";
@@ -42,25 +42,22 @@ class ReviewForm extends Component {
 
   render() {
     return (
-        // <Container>
-        <div>
-        <NavBar/>
-        <br></br>
+        <Container>
+        <Nav/>
         <Jumbotron/>
-        <br></br>
-      <form className="form-group mainBox container-fluid">
+      <form className="form-group mainBox">
         <br></br>
         <input
-        className="form-control box2"
+        className="form-control"
           type="text"
-          placeholder="Name of Park"
+          placeholder="Title"
           name="title"
           value={this.state.title}
           onChange={this.handleInputChange}
         />
         <br></br>
         <input
-        className="form-control box2"
+        className="form-control"
           type="text"
           placeholder="Location"
           name="location"
@@ -76,21 +73,21 @@ class ReviewForm extends Component {
   value={this.state.features}
   onClickCapture={this.handleInputChange}
   />
-  <label className="control-label" for="customCheck1" id="swingCheckBox" style={{color:'white', fontWeight:'bolder'}}>Swings</label>
-{/* <br></br>
+  <label className="control-label" for="customCheck1">Swings</label>
 <br></br>
-<br></br> */}
+<br></br>
+<br></br>
   <input className="form-check-input" type="checkbox" id="inlineCheckbox2" value={this.state.features}onClickCapture={this.handleInputChange}/>
-  <label className="control-label" for="inlineCheckbox2" id="slideCheckBox"style={{color:'white', fontWeight:'bolder'}}>Slides</label>
+  <label className="control-label" for="inlineCheckbox1">Slides</label>
 
   <input className="form-check-input" type="checkbox" id="inlineCheckbox3" value={this.state.features}onClickCapture={this.handleInputChange}/>
-  <label className="control-label" for="inlineCheckbox3" id="monkeyCheckBox"style={{color:'white', fontWeight:'bolder'}}>Monkey Bar</label>
+  <label className="control-label" for="inlineCheckbox3">Monkey Bar</label>
 
   <input className="form-check-input" type="checkbox" id="inlineCheckbox4" value={this.state.features}onClickCapture={this.handleInputChange}/>
-  <label className="control-label" for="inlineCheckbox4" id="musicCheckBox"style={{color:'white', fontWeight:'bolder'}}> Music</label>
+  <label className="control-label" for="inlineCheckbox4">3 Music</label>
 </div>
         <input
-        className="form-control description box2"
+        className="form-control description"
         type="text"
         placeholder="Description"
         name="description"
@@ -100,7 +97,7 @@ class ReviewForm extends Component {
       <br>
       </br>
       <p>Upload Images</p>
-      <div className="custom-file uploadImages box2">
+      <div className="custom-file uploadImages">
   <input type="file"
   className="custom-file-input" 
   id="customFile"
@@ -112,10 +109,9 @@ class ReviewForm extends Component {
 </div>
 <br></br>
 <br></br>
-        <button class="btn btn-dark submitBtn" onClick={this.handleFormSubmit}>Submit</button>
+        <button onClick={this.handleFormSubmit}>Submit</button>
       </form>
-      {/* // </Container> */}
-      </div>
+      </Container>
     );
   }
 }

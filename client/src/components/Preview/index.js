@@ -19,13 +19,13 @@ export function Preview({ children }) {
   }) {
     return (
         <ul>
-            <li className="list-group-item container-fluid box1">
+            <li className="list-group-item box1">
             <Container>
                 <Row>
                 <Col size="lg-4 lg-6">
             <Thumbnail src={thumbnail} />
           </Col>
-          <Col size="lg-4 lg-6">
+          <Col size="lg-4 lg-4">
           <p>{title}</p>
           <a rel="noreferrer noopener" target="_blank" href={href}>
              <h1 style={{ color: 'white'}}>Link to the park page</h1> 
