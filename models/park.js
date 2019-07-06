@@ -23,11 +23,11 @@ let ParkSchema = new Schema({
         type: {
             type: String,
             enum: ["Point"],
-            required: true
+            required: false
         },
         coordinates: {
             type: [Number],
-            required: true
+            required: false
         }
     },
     // Appropriate childrens age for park
@@ -37,16 +37,20 @@ let ParkSchema = new Schema({
     },
     // Image of the park
     image: {
-        type: Buffer,
-        required: true
+        type: String,
+        required: false
     },
-    // Array of object ids containing park features
-    features: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: "ParkFeatures"
+    // What features are in the park
+    features: {
+        name: {
+            type: String,
+            required: true
+        },
+        isChecked: {
+            type: Boolean,
+            required: true
         }
-    ],
+    },
     // Array of object ids containing park reviews
     reviews: [
         {
