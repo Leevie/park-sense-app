@@ -1,5 +1,4 @@
 import React from "react";
-import axios from "axios";
 // import "./Login.css";
 // import {Animated} from "react-animated-css";
 import "./style.css";
@@ -74,7 +73,9 @@ class Login extends React.Component {
                                         <input 
                                         name= "username"
                                          type="text"
-                                         className="form-control" 
+                                         className={classnames("form-control", {
+                                          invalid: errors.username
+                                        })}
                                          id="username"
                                          error={errors.isername} 
                                          aria-describedby="username" 
@@ -88,7 +89,9 @@ class Login extends React.Component {
                                         <input 
                                         name="password"
                                         type="password" 
-                                        className="form-control" 
+                                        className={classnames("form-control", {
+                                          invalid: errors.password
+                                        })}
                                         error={errors.password}
                                         id="password" 
                                         placeholder="Enter Password"

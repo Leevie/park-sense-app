@@ -54,7 +54,7 @@ router.post("/login", (req, res) => {
   User.findOne({ username }).then(user => {
     // Check if user exists
     if (!user) {
-      return res.status(404).json({ emailnotfound: "Email not found" });
+      return res.status(404).json({ usernamenotfound: "Username not found" });
     }
 
     // Check password
@@ -64,7 +64,7 @@ router.post("/login", (req, res) => {
         // Create JWT Payload
         const payload = {
           id: user.id,
-          name: user.username
+          username: user.username
         };
 
         // Sign token
@@ -90,16 +90,16 @@ router.post("/login", (req, res) => {
   });
 });
 
-// Matches with "/api/users"
-router.route("/")
-  .get(usersController.findAll)
-  .post(usersController.create);
+// // Matches with "/api/users"
+// router.route("/")
+//   .get(usersController.findAll)
+//   .post(usersController.create);
 
-// Matches with "/api/users/:id"
-router
-  .route("/:id")
-  .get(usersController.findById)
-  .put(usersController.update)
-  .delete(usersController.remove);
+// // Matches with "/api/users/:id"
+// router
+//   .route("/:id")
+//   .get(usersController.findById)
+//   .put(usersController.update)
+//   .delete(usersController.remove);
 
 module.exports = router;
