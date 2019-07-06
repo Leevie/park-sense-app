@@ -3,7 +3,7 @@ import { Link} from "react-router-dom";
 import "./index.css";
 
 
-function NavBar(props) {
+function NavBar() {
   return (
     <div container-fluid>
     <ul className="nav navBar justify-content-end">
