@@ -1,0 +1,57 @@
+ handleInputChange = (event) => {
+                this.setState({
+            [event.target.name]: event.target.value
+        })
+    }
+
+
+   handleSubmit = (event) => {
+        event.preventDefault();
+        const {username, password} = this.state;
+
+        const userSignUp = {
+            username,
+            password
+        };
+
+        axios.post("/db/newuser", userSignUp)
+            .then((response)=>{
+                console.log("user#: " + response._id)
+            }).catch((error) => {
+                throw error
+            })
+   }
+
+   onSignIn (event){
+        event.preventDefault();
+        console.log('Sign in attempted...')
+        axios.get("/db/finduser/" + this.state.username + "/" + this.state.password)
+            .then((response) => {
+                if (response.data.ans === true){
+                    console.log('Signing in!')
+                    this.props.authorize(response.data.data);
+                } else {
+                    alert('Sorry, nothing found. Try again, or create an account!')
+                    this.setState({
+                        username: "",
+                        password: ""
+                    });
+                }
+
+            }).catch((error) => {
+                throw error;
+            })
+   }
+
+   handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    alert(`Username: ${this.state.username}\nPassword: ${this.state.password}`);
+    this.setState({ username: "", password: "" });
+  };

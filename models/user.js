@@ -7,12 +7,12 @@ let Schema = mongoose.Schema;
 // Define our schema
 let UserSchema = new Schema({
     // First name
-    firstName: {
+    username: {
         type: String,
         required: true
     },
     // Last Name
-    lastName: {
+    password: {
         type: String,
         required: true
     },
