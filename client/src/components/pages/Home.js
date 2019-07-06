@@ -2,7 +2,7 @@ import React from "react";
 import NavBar from "../Nav";
 import Jumbotron from "../Jumbotron";
 import Review from "../Review";
-import {Preview, PreviewItem} from "../Preview/index";
+import PreviewTest from "../Preview/index";
 import Footer from "../Footer";
 import "./style.css";
 // import NavBar from "../Nav";
@@ -11,20 +11,10 @@ import "./style.css";
 function Home() {
   return (
     <div>
-      <NavBar/>
-     <Jumbotron/>
+    <NavBar/>
+    <Jumbotron/>
     <Review/>
-    <Preview>
-
-                      <PreviewItem
-                        // key={recipe.title}
-                        // title={recipe.title}
-                        // href={recipe.href}
-                        // ingredients={recipe.ingredients}
-                        // thumbnail={recipe.thumbnail}
-                      />
-        
-    </Preview>
+    <PreviewTest/>
     <Footer/>
     </div>
   );
