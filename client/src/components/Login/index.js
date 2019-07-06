@@ -5,62 +5,57 @@ import axios from "axios";
 import "./style.css";
 import Nav from "../Nav";
 import { Link} from "react-router-dom";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { loginUser } from "../../actions/authActions";
+import classnames from "classnames";
+
 
 class Login extends React.Component {
 
 
     state = {
         username: "",
-        password: ""
+        password: "",
+        errors:{}
     };
 
-    handleInputChange = (event) => {
-                this.setState({
-            [event.target.name]: event.target.value
-        })
-    }
-
-
-   handleSubmit = (event) => {
-        event.preventDefault();
-        const {username, password} = this.state;
-
-        const userSignUp = {
-            username,
-            password
+    componentDidMount() {
+        // If logged in and user navigates to Login page, should redirect them to dashboard
+        if (this.props.auth.isAuthenticated) {
+          this.props.history.push("/dashboard");
+        }
+      }
+    
+      componentWillReceiveProps(nextProps) {
+        if (nextProps.auth.isAuthenticated) {
+          this.props.history.push("/dashboard");
+        }
+    
+        if (nextProps.errors) {
+          this.setState({
+            errors: nextProps.errors
+          });
+        }
+      }
+    
+      onChange = e => {
+        this.setState({ [e.target.id]: e.target.value });
+      };
+    
+      onSubmit = e => {
+        e.preventDefault();
+    
+        const userData = {
+          username: this.state.username,
+          password: this.state.password
         };
-
-        axios.post("/db/newuser", userSignUp)
-            .then((response)=>{
-                console.log("user#: " + response._id)
-            }).catch((error) => {
-                throw error
-            })
-   }
-
-   onSignIn (event){
-        event.preventDefault();
-        console.log('Sign in attempted...')
-        axios.get("/db/finduser/" + this.state.username + "/" + this.state.password)
-            .then((response) => {
-                if (response.data.ans === true){
-                    console.log('Signing in!')
-                    this.props.authorize(response.data.data);
-                } else {
-                    alert('Sorry, nothing found. Try again, or create an account!')
-                    this.setState({
-                        username: "",
-                        password: ""
-                    });
-                }
-
-            }).catch((error) => {
-                throw error;
-            })
-   }
+    
+        this.props.loginUser(userData);
+      };
 
     render() {
-
+        const { errors } = this.state;
         const {username, password} = this.state
 
         return (
@@ -73,18 +68,19 @@ class Login extends React.Component {
                         <div className="card">
                             <div className="card-body">
                                 <h2 style={{fontWeight:'bolder', fontSize:'60px'}}>Login</h2>
-                                <form onSubmit={this.handleSubmit}>
+                                <form noValidate onSubmit={this.onSubmit}>
                                     <div className="form-group">
                                         <label style={{fontWeight:'bolder'}}>Username:</label>
                                         <input 
                                         name= "username"
                                          type="text"
                                          className="form-control" 
-                                         id="username" 
+                                         id="username"
+                                         error={errors.isername} 
                                          aria-describedby="username" 
                                          placeholder="Enter Username"
                                          value={username}
-                                         onChange={this.handleInputChange}
+                                         onChange={this.onChange}
                                          />
                                     </div>
                                     <div className="form-group">
@@ -93,17 +89,17 @@ class Login extends React.Component {
                                         name="password"
                                         type="password" 
                                         className="form-control" 
+                                        error={errors.password}
                                         id="password" 
                                         placeholder="Enter Password"
                                         value={password}
-                                        onChange={this.handleInputChange}
+                                        onChange={this.onChange}
                                         />
                                     </div>
                                     <div className = 'd-inline'>
                                         <button 
                                             type="button" 
                                             className="btn btn-secondary btn-success mr-5 signIn"
-                                            onClick={(event)=>this.onSignIn(event)}
                                             >Sign In
                                         </button>
                                         <Link to="/signup" role="button" className="btn btn-secondary btn-success register">
@@ -122,5 +118,19 @@ class Login extends React.Component {
         );
     };
 };
+Login.propTypes = {
+  loginUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired
+};
 
-export default Login;
+const mapStateToProps = state => ({
+  auth: state.auth,
+  errors: state.errors
+});
+
+export default connect(
+  mapStateToProps,
+  { loginUser }
+)(Login);
+

@@ -1,27 +1,54 @@
 import React, { Component } from "react";
+import { Link, withRouter } from "react-router-dom";
 import "./style.css";
 import Nav from "../Nav";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { registerUser } from "../../actions/authActions";
+import classnames from "classnames";
 
 class SignUp extends Component {
-  state = {
-    username: "",
-    password: ""
-  };
+  constructor() {
+    super();
+    this.state = {
+      username: "",
+      password: "",
+      errors: {}
+    };
+  }
  
-  handleInputChange = event => {
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value
-    });
+  componentDidMount() {
+    // If logged in and user navigates to Register page, should redirect them to dashboard
+    if (this.props.auth.isAuthenticated) {
+      this.props.history.push("/dashboard");
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.errors) {
+      this.setState({
+        errors: nextProps.errors
+      });
+    }
+  }
+
+  onChange = e => {
+    this.setState({ [e.target.id]: e.target.value });
   };
 
-  handleFormSubmit = event => {
-    event.preventDefault();
-    alert(`Username: ${this.state.username}\nPassword: ${this.state.password}`);
-    this.setState({ username: "", password: "" });
+  onSubmit = e => {
+    e.preventDefault();
+
+    const newUser = {
+      username: this.state.name,
+      password: this.state.password,
+    };
+
+    this.props.registerUser(newUser, this.props.history);
   };
 
   render() {
+    const { errors } = this.state;
     return (
 <div>
           <Nav/>
@@ -32,18 +59,21 @@ class SignUp extends Component {
               <div className="card">
                   <div className="card-body">
                       <h2 style={{fontWeight:'bolder', fontSize:'60px'}}>Register An Account</h2>
-                      <form onSubmit={this.handleSubmit}>
+                      <form noValidate onSubmit={this.onSubmit}>
                           <div className="form-group">
                               <label style = {{fontWeight:'bolder'}}>Username:</label>
                               <input 
                               name= "username"
                                type="text"
-                               className="form-control" 
+                               className={classnames("form-control", {
+                                invalid: errors.username
+                              })}
+                               error={errors.username}
                                id="username" 
                                aria-describedby="username" 
                                placeholder="Enter Username"
                                value={this.state.username}
-                               onChange={this.handleInputChange}
+                               onChange={this.onChange}
                                />
                           </div>
                           <div className="form-group">
@@ -51,11 +81,13 @@ class SignUp extends Component {
                               <input 
                               name="password"
                               type="password" 
-                              className="form-control" 
                               id="password" 
                               placeholder="Enter Password"
                               value={this.state.password}
-                              onChange={this.handleInputChange}
+                              className={classnames("form-control", {
+                                invalid: errors.password
+                              })}
+                              onChange={this.onChange}
                               />
                           </div>
                           <div className = 'd-inline'>
@@ -78,8 +110,21 @@ class SignUp extends Component {
   };
 };
 
+SignUp.propTypes = {
+  registerUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired
+};
 
+const mapStateToProps = state => ({
+  auth: state.auth,
+  errors: state.errors
+});
 
-export default SignUp;
+export default connect(
+  mapStateToProps,
+  { registerUser }
+)(withRouter(SignUp));
+
 
 
