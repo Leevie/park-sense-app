@@ -6,7 +6,9 @@ import API from "../../utils/API";
 import {List, ListItem} from "../List";
 import {Link} from "react-router-dom";
 
-class PreviewTest extends Component {
+let dImage = "https://via.placeholder.com/150"
+
+class Preview extends Component {
   state = {
     parks: [],
     thumbnail: "",
@@ -81,16 +83,23 @@ class PreviewTest extends Component {
                 
         //     </li>
         // </ul>
-        <div>
+        <div className= "preview-item">
         {this.state.parks.length ? (
           <List>
             {this.state.parks.map(park => (
               <ListItem key={park._id}>
-                <Link to={"/parks/" + park._id}>
-                  <strong>
-                    {park.parkName} by {park.description}
-                  </strong>
-                </Link>
+                <div className="clearfix img-holder">
+                <img src={dImage}/>
+                </div>
+                <span className="preview-span">
+                    <Link to={"/parks/" + park._id}>
+                      <strong>
+                        {park.parkName} 
+                      </strong>
+                    </Link>
+                      <br/>
+                        {park.description}
+                  </span>
                 {/* <DeleteBtn onClick={() => this.deletePark(park._id)} /> */}
               </ListItem>
             ))}
@@ -113,4 +122,4 @@ class PreviewTest extends Component {
 
 
 
-export default PreviewTest;
+export default Preview;

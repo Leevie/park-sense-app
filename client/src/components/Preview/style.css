@@ -1,3 +1,11 @@
+.preview-item {
+    text-align: justify;
+}
+
+.preview-span {
+    display: block;
+}
+
 ul{
     padding:20px;
 }
@@ -5,10 +13,6 @@ ul p{
     margin: 10px;
 }
 
-.box1{
-    background-color:black;
-    color: white;
-}
 
 /* .box2{
     background-color: red;
@@ -19,6 +23,12 @@ h1{
     font-size: 25px;
 }
 
-.test2{
-    border: solid yellow;
+.img-holder, img {
+    margin-right: 10px;
+    float: left;
+    height: 100px;
+}
+
+.clearfix {
+    overflow: auto;
 }
