@@ -9,7 +9,7 @@ class ReviewForm extends Component {
   state = {
     parkName: "",
     description: "",
-    location: [],
+    location: "",
     age: 0,
     image: "",
     features: [{ name: "swings", isChecked: false }, { name: "slides", isChecked: false },
@@ -35,7 +35,7 @@ class ReviewForm extends Component {
       if (feature.name === event.target.name) {
         feature.isChecked = event.target.checked
       }
-    })
+    });
     // Set the state for the appropriate input field
     this.setState({
       [name]: value,
@@ -53,7 +53,7 @@ class ReviewForm extends Component {
     this.setState({
       parkName: "",
       description: "",
-      location: [],
+      location: "",
       age: 0,
       image: "",
       features: [{ name: "swings", isChecked: false }, { name: "slides", isChecked: false },
