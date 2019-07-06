@@ -2,70 +2,75 @@ const mongoose = require("mongoose");
 const db = require("../models");
 
 // Connect to database
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/parkdb", { useNewUrlParser: true });
-mongoose.connect(process.env.MONGODB_URI || "mongodb://seeder:mypassword123@ds111258.mlab.com:11258/heroku_2qb48p72", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/parkdb", { useNewUrlParser: true });
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://seeder:mypassword123@ds111258.mlab.com:11258/heroku_2qb48p72", { useNewUrlParser: true });
 
 // Park seeding
 const parkSeed = [
     {
         parkName: "Como Regional Park",
         description: "Park with conservatory, zoo, gardens and pool",
-        location: {
-            type: "Point",
-            coordinates: [44.978623, -93.149691]
-        },
+        location: "St. Paul",
         age: 7,
         image: "",
         features: [],
-        reviews: []
+        reviews: [],
+        swings: "",
+        slides: "",
+        "monkey-bar": "",
+        castle: ""
     },
     {
         parkName: "Lebanon Hills Regional Park",
         description: "Has multiple lakes, numerous hiking trails, and rec center",
-        location: {
-            type: "Point",
-            coordinates: [44.778722, -93.164630]
-        },
+        location: "Eagan",
         age: 5,
         image: "",
         features: [],
-        reviews: []
+        reviews: [],
+        swings: "",
+        slides: "",
+        "monkey-bar": "",
+        castle: ""
     },
     {
         parkName: "Murphy-Hanrehan Park Reserve",
         description: "Popular destination for hiking, mountain biking and bird watching",
-        location: {
-            type: "Point",
-            coordinates: [44.715396, -93.332083]
-        },
+        location: "Prior Lake",
         age: 10,
         image: "",
         features: [],
-        reviews: []
+        reviews: [],
+        swings: "",
+        slides: "",
+        "monkey-bar": "",
+        castle: ""
     },
     {
         parkName: "Hyland Lake Park Reserve - Recreation Area",
         description: "Huge park with elaborate playground and picnic area",
-        location: {
-            type: "Point",
-            coordinates: [44.825491, -93.373868]
-        },
+        location: "Bloomington",
         age: 2,
         image: "",
         features: [],
-        reviews: []
+        reviews: [],
+        swings: "",
+        slides: "",
+        "monkey-bar": "",
+        castle: ""
     },
     {
         parkName: "Elm Creek Park Reserve",
         description: "5000 acres of hiking, swimming, and disc golf",
-        location: {
-            type: "Point",
-            coordinates: [45.169404, -93.441118]
-        },
+        location: "Elm Creek",
         age: 12,
         image: "",
         features: [],
-        reviews: []
+        reviews: [],
+        swings: "",
+        slides: "",
+        "monkey-bar": "",
+        castle: ""
     }
 ];
 

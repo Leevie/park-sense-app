@@ -20,15 +20,8 @@ let ParkSchema = new Schema({
     // Use the 'Point' GeoJSON object https://docs.mongodb.com/manual/reference/geojson/
     // Mongoose reference: https://mongoosejs.com/docs/geojson.html
     location: {
-        type: {
-            type: String,
-            enum: ["Point"],
-            required: false
-        },
-        coordinates: {
-            type: [Number],
-            required: false
-        }
+        type: String,
+        required: true
     },
     // Appropriate childrens age for park
     age: {
@@ -41,23 +34,41 @@ let ParkSchema = new Schema({
         required: false
     },
     // What features are in the park
-    features: {
-        name: {
-            type: String,
-            required: true
-        },
-        isChecked: {
-            type: Boolean,
-            required: true
+    features: [
+        {
+            name: {
+                type: String,
+                required: true
+            },
+            isChecked: {
+                type: Boolean,
+                required: true
+            }
         }
-    },
+    ],
     // Array of object ids containing park reviews
     reviews: [
         {
             type: Schema.Types.ObjectId,
             ref: "ParkReviews"
         }
-    ]
+    ],
+    swings: {
+        type: String,
+        required: false
+    },
+    slides: {
+        type: String,
+        required: false
+    },
+    "monkey-bar": {
+        type: String,
+        required: false
+    },
+    castle: {
+        type: String,
+        required: false
+    }
 });
 
 // Set up the park using our model
