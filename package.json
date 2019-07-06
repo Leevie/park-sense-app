@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js && npm run seed",
-    "seed": "cd scripts && node seedParkDB.js && node seedParkFeatureDB.js && node seedParkReviewDB.js"
+    "start": "node server.js",
+    "seed": "cd scripts && node seedParkDB.js && node seedParkFeatureDB.js && node seedParkReviewDB.js && node seedParkFeaturesReviewsDB.js && node seedUserDB.js"
   },
   "repository": {
     "type": "git",
