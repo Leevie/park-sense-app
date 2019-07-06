@@ -4,6 +4,6 @@ div.thumbnail {
   background-position: center;
   width: 100%;
   padding-top: 100%;
-  border:double 25px white;
+  border: solid 6px white
 }
 

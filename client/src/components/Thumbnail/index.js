@@ -10,7 +10,7 @@ function Thumbnail({
 {
   return (
     <div
-      className="col-xs-4 md-2 thumbnail"
+      className="col-xs-4 sm-2 thumbnail"
       role="img"
       aria-label="Park Image"
       style={{

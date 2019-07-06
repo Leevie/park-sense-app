@@ -3,7 +3,7 @@ import "./footer.css";
 
 function Footer(){
     return (
-      <footer className="footer mt-auto py-5"style={{border: 'double 20px gold'}}>
+      <footer className="footer mt-auto py-3">
         <div className="container">
           <span className="text-muted">
             &copy; PARKIFY APP - All rights reserved.
