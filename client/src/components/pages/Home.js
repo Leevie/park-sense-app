@@ -5,7 +5,6 @@ import Review from "../Review";
 import Preview from "../Preview/index";
 import Footer from "../Footer";
 import "./style.css";
-// import NavBar from "../Nav";
 
 
 function Home() {
