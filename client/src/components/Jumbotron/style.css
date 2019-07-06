@@ -5,7 +5,7 @@
 } */
 
 .jumbotron{
-    background-color:navy;
+    background-color:green;
     border: double black 20px;
     /* margin-left: 15px; */
     padding:33px;
@@ -13,7 +13,7 @@
 }
 
 .button{
-    border: double 10px gold;
+    border: double 10px green;
     background-color: black;
 }
 
@@ -26,3 +26,4 @@ h1{
     font-size: larger;
     /* color: white; */
 }
+
