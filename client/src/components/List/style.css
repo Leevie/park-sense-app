@@ -1,3 +1,4 @@
+/*
 .list-overflow-container {
   max-height: 545px;
   border: 1px #DDDDDD solid;
@@ -30,4 +31,19 @@
 
 .list-overflow-container li:last-child {
   border-bottom: none;
+}
+*/
+.list-container {
+  border: 1px #DDDDDD solid;
+  border-radius: 4px;
+}
+
+.list-container li {
+  border-radius: 0px;
+  border-left: none;
+  border-right: none;
+}
+
+.list-container li a {
+  color: #2A878C;
 }

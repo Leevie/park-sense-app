@@ -3,7 +3,7 @@
 }
 
 .preview-span {
-    display: block;
+    display: inline-block;
 }
 
 ul{
@@ -45,7 +45,7 @@ h1{
 .img-holder, img {
     margin-right: 10px;
     float: left;
-    height: 100px;
+    width: 100px;
 }
 
 .clearfix {

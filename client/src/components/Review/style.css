@@ -1,10 +1,10 @@
-#root > div > div:nth-child(3) > button.btn.btn-lg{
+/* #root > div > div:nth-child(3) > button.btn.btn-lg{
     border: solid 1px  black;
     margin: 5px;
     
 
-}
-
-/* .btn{
-    margin:0px;
 } */
+
+.review-buttons {
+    margin-bottom: 20px;    
+}
