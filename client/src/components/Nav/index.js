@@ -5,7 +5,7 @@ import "./index.css";
 
 function NavBar() {
   return (
-    <div>
+    <div className="container">
     <ul className="nav navBar justify-content-end">
       <li className="nav-item">
         <Link to="/" role="button" className="btn btn-link">
