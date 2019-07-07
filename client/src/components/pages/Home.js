@@ -11,8 +11,8 @@ import { Container } from "../Grid";
 function Home() {
   return (
     <div>
-    <Container>
     <NavBar/>
+    <Container>
     <Jumbotron/>
     <Review/>
     <Preview/>
