@@ -1,35 +1,9 @@
-/* .login{
-    margin: 5px;
-    padding: 10px;
-    position: relative;
-    left: 25%;
-}
-.signup{
-    position: relative;
-    left: 1%;
-    margin: 5px;
-    padding: 10px;
-} */
-
-/* .saved{
-    position: relative;
-    left: 1%;
-    margin: 5px;
-    padding: 10px;
-} */
-
 .navBar{
     background-color:black;
-    padding: 30px;
-    border: solid white 4px;
-    margin: 15px;
+    padding: 10px;
+    margin: 15px 0;
     
 }
-
-/* .nav-item{
-    background-color: white;
-    font-size: 50px;
-} */
 
 .btn{
     color: green;
@@ -37,5 +11,5 @@
 }
 
 .nav-span{
-    font-size: 30px;
+    font-size: 20px;
 }
