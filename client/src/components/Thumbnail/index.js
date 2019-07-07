@@ -6,11 +6,11 @@ import "./style.css";
 // The "role" and "aria label" are there to identify the element's purpose as an image for accessibility purposes
 function Thumbnail({ 
   src,
-  thumbnail = "https://www.exploregeorgia.org/sites/default/files/styles/slideshow_large/public/legacy_images/dunwoody-nature-center-playground-1474661724.jpg?itok=1ozVLkjN" })
+  thumbnail = "http://wantaghwoodschiropractic.com/index/wp-content/uploads/2016/07/Playground.jpg" })
 {
   return (
     <div
-      className="col-xs-4 md-2 thumbnail"
+      className="col-xs-4 sm-2 thumbnail"
       role="img"
       aria-label="Park Image"
       style={{
