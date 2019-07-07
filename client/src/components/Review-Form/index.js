@@ -63,8 +63,9 @@ class ReviewForm extends Component {
 
   render() {
     return (
+      <div>
+      <Nav />
       <Container>
-        <Nav />
         <Jumbotron />
         <form className="form-group mainBox">
           <br></br>
@@ -152,6 +153,7 @@ class ReviewForm extends Component {
           <button onClick={this.handleFormSubmit}>Submit</button>
         </form>
       </Container>
+      </div>
     );
   }
 }

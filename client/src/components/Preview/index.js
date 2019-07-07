@@ -89,7 +89,7 @@ class Preview extends Component {
             {this.state.parks.map(park => (
               <ListItem key={park._id}>
                 <div className="clearfix img-holder">
-                <img src={dImage}/>
+                <img src={park.image}/>
                 </div>
                 <span className="preview-span">
                     <Link to={"/parks/" + park._id}>
@@ -99,6 +99,8 @@ class Preview extends Component {
                     </Link>
                       <br/>
                         {park.description}
+                      <br/>
+                      <strong>Recommended Age:  </strong> {park.age}
                   </span>
                 {/* <DeleteBtn onClick={() => this.deletePark(park._id)} /> */}
               </ListItem>
