@@ -3,60 +3,63 @@ import React from "react";
 // import {Animated} from "react-animated-css";
 import "./style.css";
 import Nav from "../Nav";
-import { Link} from "react-router-dom";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import { loginUser } from "../../actions/authActions";
-import classnames from "classnames";
+import { Link, Redirect} from "react-router-dom";
+import axios from "axios";
 
 
 class Login extends React.Component {
 
+  constructor() {
+    super()
+    this.state = {
+        username: '',
+        password: '',
+        redirectTo: null
+    }
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleChange = this.handleChange.bind(this)
 
-    state = {
-        username: "",
-        password: "",
-        errors:{}
-    };
+}
 
-    componentDidMount() {
-        // If logged in and user navigates to Login page, should redirect them to dashboard
-        if (this.props.auth.isAuthenticated) {
-          this.props.history.push("/dashboard");
-        }
-      }
-    
-      componentWillReceiveProps(nextProps) {
-        if (nextProps.auth.isAuthenticated) {
-          this.props.history.push("/dashboard");
-        }
-    
-        if (nextProps.errors) {
-          this.setState({
-            errors: nextProps.errors
-          });
-        }
-      }
-    
-      onChange = e => {
-        this.setState({ [e.target.id]: e.target.value });
-      };
-    
-      onSubmit = e => {
-        e.preventDefault();
-    
-        const userData = {
-          username: this.state.username,
-          password: this.state.password
-        };
-    
-        this.props.loginUser(userData);
-      };
+handleChange(event) {
+    this.setState({
+        [event.target.name]: event.target.value
+    })
+}
 
+handleSubmit(event) {
+    event.preventDefault()
+    console.log('handleSubmit')
+
+    axios
+        .post('/user/login', {
+            username: this.state.username,
+            password: this.state.password
+        })
+        .then(response => {
+            console.log('login response: ')
+            console.log(response)
+            if (response.status === 200) {
+                // update App.js state
+                this.props.updateUser({
+                    loggedIn: true,
+                    username: response.data.username
+                })
+                // update the state to redirect to home
+                this.setState({
+                    redirectTo: '/'
+                })
+            }
+        }).catch(error => {
+            console.log('login error: ')
+            console.log(error);
+            
+        })
+}
     render() {
-        const { errors } = this.state;
-        const {username, password} = this.state
-
+        if (this.state.redirectTo) {
+            return <Redirect to={{ pathname: this.state.redirectTo }} />
+        } else {
         return (
         <div>
           <Nav/>
@@ -67,21 +70,17 @@ class Login extends React.Component {
                         <div className="card">
                             <div className="card-body">
                                 <h2 style={{fontWeight:'bolder', fontSize:'60px'}}>Login</h2>
-                                <form noValidate onSubmit={this.onSubmit}>
+                                <form >
                                     <div className="form-group">
                                         <label style={{fontWeight:'bolder'}}>Username:</label>
                                         <input 
                                         name= "username"
                                          type="text"
-                                         className={classnames("form-control", {
-                                          invalid: errors.username
-                                        })}
+                                         className="form-control"
                                          id="username"
-                                         error={errors.isername} 
-                                         aria-describedby="username" 
                                          placeholder="Enter Username"
-                                         value={username}
-                                         onChange={this.onChange}
+                                         value={this.state.username}
+                                         onChange={this.handleChange}
                                          />
                                     </div>
                                     <div className="form-group">
@@ -89,19 +88,18 @@ class Login extends React.Component {
                                         <input 
                                         name="password"
                                         type="password" 
-                                        className={classnames("form-control", {
-                                          invalid: errors.password
-                                        })}
-                                        error={errors.password}
+                                        className="form-control"
+                                        
                                         id="password" 
                                         placeholder="Enter Password"
-                                        value={password}
-                                        onChange={this.onChange}
+                                        value={this.state.password}
+                                        onChange={this.handleChange}
                                         />
                                     </div>
                                     <div className = 'd-inline'>
                                         <button 
                                             type="button" 
+                                            onClick={this.handleSubmit}
                                             className="btn btn-secondary btn-success mr-5 signIn"
                                             >Sign In
                                         </button>
@@ -120,20 +118,7 @@ class Login extends React.Component {
             
         );
     };
-};
-Login.propTypes = {
-  loginUser: PropTypes.func.isRequired,
-  auth: PropTypes.object.isRequired,
-  errors: PropTypes.object.isRequired
+}
 };
 
-const mapStateToProps = state => ({
-  auth: state.auth,
-  errors: state.errors
-});
-
-export default connect(
-  mapStateToProps,
-  { loginUser }
-)(Login);
-
+export default Login;

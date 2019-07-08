@@ -1,11 +1,44 @@
-import React from "react";
+import React,{Component} from "react";
 import { Link} from "react-router-dom";
 import "./index.css";
+import axios from "axios";
 
+class NavBar extends Component {
+  constructor() {
+      super()
+      this.logout = this.logout.bind(this)
+  }
+  logout(event) {
+    event.preventDefault()
+    console.log('logging out')
+    axios.post('/user/logout').then(response => {
+      console.log(response.data)
+      if (response.status === 200) {
+        this.props.updateUser({
+          loggedIn: false,
+          username: null
+        })
+      }
+    }).catch(error => {
+        console.log('Logout error')
+    })
+  }
 
-function NavBar() {
+render() {
+    const loggedIn = this.props.loggedIn;
+    console.log('navbar render, props: ')
+    console.log(this.props);
+    
   return (
-    <div container-fluid>
+    <div container-fluid>{loggedIn ? (
+<ul className="nav navBar justify-content-end">
+<li className="nav-item" onClick={this.logout}>
+        <Link to="/" role="button" className="btn btn-link">
+        <span className= "nav-span" style={{color:window.location.pathname === "/" ? "green" : "white"}}>Logout</span> 
+        </Link></li>
+</ul>
+    ):(
+      
     <ul className="nav navBar justify-content-end">
       <li className="nav-item">
         <Link to="/" role="button" className="btn btn-link">
@@ -28,8 +61,11 @@ function NavBar() {
       </Link>
       </li>
     </ul>
+    )}
   </div>
+    
   );
+    }
 }
 
 export default NavBar;
