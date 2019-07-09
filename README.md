@@ -5,7 +5,7 @@ Project 3
 ## Demo
 Here is a working live demo :  https://park-rangers.herokuapp.com/
 
-![Home Page](main.JPG)
+![Home Page](home.JPG)
 
 # WebApp
 <table>
