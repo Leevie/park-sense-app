@@ -67,8 +67,9 @@ Still more to come as it is a work in progress. Going forward, we'd like to inco
 <table>
 <tr>
 <td>
- ![Playground Page](playground.JPG), ![Second Playground Page] (playground2.JPG)
+ ![Playground Page](playground2.JPG) 
 </td>
+<td>
 </tr>
 </table>
 
