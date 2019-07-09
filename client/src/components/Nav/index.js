@@ -5,7 +5,7 @@ import "./index.css";
 
 function NavBar() {
   return (
-    <div className="container">
+    <div className="container nav-code">
     <ul className="nav navBar justify-content-end nav-fill">
       {/* <li>
         <a class="navbar-brand" href="#">
