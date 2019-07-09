@@ -15,6 +15,12 @@ The app utilizes tools such as:
 * axios
 * expressgit ad 
 
+
+
+![Review Page](review.JPG)
+
+
+
 Still more to come as it is a work in progress. Going forward, we'd like to incorporate functioning buttons, as well as the ability to search for specific parks with filters applied, such as age, distance, kid friendlyness, etc.
 
 <!-- ![alt text](file://IMG_20181123_115829.jpg) -->
