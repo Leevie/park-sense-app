@@ -64,14 +64,7 @@ Still more to come as it is a work in progress. Going forward, we'd like to inco
 </tr>
 </table>
 
-<table>
-<tr>
-<td>
- ![Playground Page](playground2.JPG)
-</td>
-</tr>
-</table>
-
+![Playground Page](playground2.JPG)
 
 
 
