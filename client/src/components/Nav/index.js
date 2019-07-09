@@ -6,14 +6,13 @@ import "./index.css";
 function NavBar() {
   return (
     <div className="container">
-    <ul className="nav navBar justify-content-end">
-      <li>
-      <a class="navbar-brand" href="#">
-    <img src="/docs/4.2/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt=""/>
-    Bootstrap
-  </a>
-
-      </li>
+    <ul className="nav navBar justify-content-end nav-fill">
+      {/* <li>
+        <a class="navbar-brand" href="#">
+          <img src="/favicon.ico" width="30" class="d-inline-block align-top brand-ico" alt=""/>
+          Parkify
+        </a>
+      </li> */}
       <li className="nav-item">
         <Link to="/" role="button" className="btn btn-link">
         <span className= "nav-span" style={{color:window.location.pathname === "/" ? "green" : "white"}}>Home</span> 
@@ -35,8 +34,8 @@ function NavBar() {
       </Link>
       </li>
       <li className="nav-item">
-      <Link to="/review" role="button" className="btn btn-link">
-      <span className= "nav-span" style={{ color: window.location.pathname === "/review" ? "green" : "white"}}>Review</span>  
+      <Link to="/parksubmit" role="button" className="btn btn-link">
+      <span className= "nav-span" style={{ color: window.location.pathname === "/parksubmit" ? "green" : "white"}}>Submit a Park!</span>  
       </Link>
       </li>
 
