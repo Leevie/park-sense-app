@@ -5,6 +5,12 @@ Project 3
 
 A webapp using MongoDB. The app allows the user to either sign-in to their current account or to create a new account. Once an account is made, the user is able to search for and review various parks around their local area. Users are able to search for playgrounds and parks within specific age ranges that would be appropriate for their children. The user can upload pictures, reviews, and comment on whether or not they recommend the park and for what age groups it would be most appropriate.Think of it as a yelp for parks and playgrounds!
 
+The makers of the app wanted to create a way for neighbors to communicate with each other regarding various parks in the local neighborhood and kid friendliness. It's a way to bring the community together and promote health and physical fitness. 
+
+The app utilizes tools such as mongojs, mongoose, passport, validator, axios, and express to name a few. 
+
+Still more to come as it is a work in progress. Going forward, we'd like to incorporate functioning buttons, as well as the ability to search for specific parks with filters applied, such as age, distance, kid friendlyness, etc.
+
 <!-- ![alt text](file://IMG_20181123_115829.jpg) -->
 
 
