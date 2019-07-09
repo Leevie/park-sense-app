@@ -4,7 +4,7 @@ import { Container } from "../Grid";
 import Jumbotron from "../Jumbotron";
 import API from "../../utils/API";
 import "./style.css";
-class ReviewForm extends Component {
+class ParkSubmit extends Component {
   // Setting the initial values of this.state.username and this.state.password
   state = {
     parkName: "",
@@ -158,4 +158,4 @@ class ReviewForm extends Component {
   }
 }
 
-export default ReviewForm;
+export default ParkSubmit;
