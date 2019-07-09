@@ -21,7 +21,18 @@ A webapp using MongoDB. The app allows the user to either sign-in to their curre
 The makers of the app wanted to create a way for neighbors to communicate with each other regarding various parks in the local neighborhood and kid friendliness. It's a way to bring the community together and promote health and physical fitness amoung families. 
 
 
+<table>
+<tr>
+<td>
+
 ![Review Page](review.JPG)
+
+
+![Park Page](park.JPG)
+
+</td>
+</tr>
+</table>
 
 
 ## Technology
@@ -42,7 +53,7 @@ The app utilizes tools such as:
 - [Bootstrap](http://getbootstrap.com/) - Extensive list of components and  Bundled Javascript plugins.
 
 
-![Park Page](park.JPG)
+
 
 ## Going Forward
 <table>
