@@ -1,32 +1,41 @@
 // Require mongoose
-let mongoose = require("mongoose");
+const mongoose = require("mongoose");
+const bcrypt = require("bcryptjs");
+const Schema = mongoose.Schema;
+mongoose.promise = Promise;
 
-// Use Schema from mongoose for model
-let Schema = mongoose.Schema;
+// Define userSchema
+const userSchema = new Schema({
 
-// Define our schema
-let UserSchema = new Schema({
-    // First name
-    username: {
-        type: String,
-        required: true
-    },
-    // Last Name
-    password: {
-        type: String,
-        required: true
-    },
-    // Array of saved parks
-    savedParks: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: "Park"
-        }
-    ]
-});
+	username: { type: String, unique: false, required: false },
+	password: { type: String, unique: false, required: false }
 
+})
+
+// Define schema methods
+userSchema.methods = {
+	checkPassword: function (inputPassword) {
+		return bcrypt.compareSync(inputPassword, this.password)
+	},
+	hashPassword: plainTextPassword => {
+		return bcrypt.hashSync(plainTextPassword, 10)
+	}
+}
+
+// Define hooks for pre-saving
+userSchema.pre('save', function (next) {
+	if (!this.password) {
+		console.log('models/user.js =======NO PASSWORD PROVIDED=======')
+		next()
+	} else {
+		console.log('models/user.js hashPassword in pre save');
+		
+		this.password = this.hashPassword(this.password)
+		next()
+	}
+})
 // Set up user using our model
-let User = mongoose.model("User", UserSchema);
+let User = mongoose.model("User", userSchema);
 
 // Export User
 module.exports = User;
