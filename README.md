@@ -13,7 +13,7 @@ The app utilizes tools such as:
 * passport
 * validator
 * axios
-* expressgit ad 
+* express
 
 
 
