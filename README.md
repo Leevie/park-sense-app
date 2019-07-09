@@ -1,5 +1,8 @@
-# park-sense-app
-Project 3 
+# Parkify
+Project 3
+
+![Home Page](home.jpg)
+Move along.
 
 
 ----
