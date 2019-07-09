@@ -1,8 +1,9 @@
 # Parkify
 Project 3
 
-![Home Page](home.jpg)
+![Home Page](home.JPG)
 Move along.
+
 
 
 ----
