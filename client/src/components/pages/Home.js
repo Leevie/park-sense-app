@@ -16,8 +16,8 @@ function Home() {
     <Jumbotron/>
     <Review/>
     <Preview/>
-    <Footer/>
     </Container>
+    <Footer/>
     </div>
     
   );

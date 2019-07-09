@@ -5,6 +5,9 @@ import { Container, Row, Col } from "../Grid";
 import API from "../../utils/API";
 import {List, ListItem} from "../List";
 import {Link} from "react-router-dom";
+import ParkDetails from "../Modal";
+import { Button } from 'react-bootstrap';
+
 
 let dImage = "https://via.placeholder.com/150"
 
@@ -92,16 +95,20 @@ class Preview extends Component {
                 <img src={park.image}/>
                 </div>
                 <span className="preview-span">
-                    <Link to={"/parks/" + park._id}>
-                      <strong>
-                        {park.parkName} 
-                      </strong>
-                    </Link>
+                    {/* <Link to={"/parks/" + park._id}> */}
+                      <ParkDetails 
+                        name={park.parkName}
+                        image={park.image}
+                        description={park.description}
+                        age={park.age}
+                       />
+
                       <br/>
                         {park.description}
                       <br/>
                       <strong>Recommended Age:  </strong> {park.age}
                   </span>
+
                 {/* <DeleteBtn onClick={() => this.deletePark(park._id)} /> */}
               </ListItem>
             ))}
