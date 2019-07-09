@@ -3,7 +3,7 @@ import './App.css';
 import Home from "./components/pages/Home";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
-import ReviewFrom from "./components/Review-Form"
+import ParkSubmit from "./components/ParkSubmit"
 import { BrowserRouter as Router, Route,Switch } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
@@ -40,7 +40,7 @@ function App() {
       <div>
       
         <Route exact path="/" component={Home} />
-        <Route exact path="/review" component={ReviewFrom} />
+        <Route exact path="/parksubmit" component={ParkSubmit} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/signup" component={SignUp} />
         {/* <Route path="/:id" component={Park} /> */}
