@@ -60,11 +60,14 @@ The app utilizes tools such as:
 <tr>
 <td>
 Still more to come as it is a work in progress. Going forward, we'd like to incorporate functioning buttons, as well as the ability to search for specific parks with filters applied, such as age, distance, kid friendlyness, etc.
+
+![Playground Page](playground2.JPG)
+
 </td>
 </tr>
 </table>
 
-![Playground Page](playground2.JPG)
+
 
 
 
