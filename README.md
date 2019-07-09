@@ -16,14 +16,16 @@ A webapp using MongoDB. The app allows the user to either sign-in to their curre
 </tr>
 </table>
 
-#Motivation
+## Motivation
+
 The makers of the app wanted to create a way for neighbors to communicate with each other regarding various parks in the local neighborhood and kid friendliness. It's a way to bring the community together and promote health and physical fitness amoung families. 
 
 
 ![Review Page](review.JPG)
 
 
-#Technology
+## Technology
+
 The app utilizes tools such as:
 * mongojs
 * mongoose
