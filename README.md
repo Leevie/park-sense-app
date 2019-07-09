@@ -2,8 +2,10 @@
 Project 3
 
 ![Home Page](home.JPG)
-Move along.
 
+A webapp using MongoDB to display reviews of parks located around the city. The app lets the user create an account to search specifically for playgrounds and parks within precise age ranges for their children. The user can upload pictures, reviews, and comment on whether or not they recommend the park and for what age groups it would be most appropriate.
+
+<!-- ![alt text](file://IMG_20181123_115829.jpg) -->
 
 
 ----
