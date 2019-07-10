@@ -39,18 +39,14 @@ The makers of the app wanted to create a way for neighbors to communicate with e
 
 The app utilizes tools such as:
 * mongojs
-* mongoose
-* passport
-* validator
-* axios
-* express
+* Mongoose
+* Passport
+* Axios
+* Express
+* React
 
 
 
-## Built with 
-
-- [jQuery - Ajax](http://www.w3schools.com/jquery/jquery_ref_ajax.asp) - jQuery simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development.
-- [Bootstrap](http://getbootstrap.com/) - Extensive list of components and  Bundled Javascript plugins.
 
 
 
