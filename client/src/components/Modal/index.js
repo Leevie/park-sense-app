@@ -44,7 +44,7 @@ class ParkDetails extends Component {
             </Modal.Header>
             <Modal.Body>
                 <div className="modal-image">
-                <img src={image} alt=""/>
+                <img className="mod-img" src={image} alt=""/>
                 </div>
                 <br/>
                 <p>
