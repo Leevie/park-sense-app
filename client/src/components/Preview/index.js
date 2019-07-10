@@ -7,6 +7,7 @@ import {List, ListItem} from "../List";
 import {Link} from "react-router-dom";
 import ParkDetails from "../Modal";
 import { Button } from 'react-bootstrap';
+import Review from "../Review";
 
 
 let dImage = "https://via.placeholder.com/150"
@@ -18,7 +19,7 @@ class Preview extends Component {
     title: "",
     summary: "",
     href: "",
-    appropriateAge: "",
+    appropriateAge: [],
     starRating: ""
   }
 
@@ -28,10 +29,15 @@ class Preview extends Component {
     this.loadParks();
   }
 
+  filterBtn = (appropriateAge) => {
+    this.setState({appropriateAge})
+  }
+
+
   loadParks = () => {
     API.getParks()
       .then(res =>
-          this.setState({ parks: res.data, title: "TITLE", summary: "SUMMARY", appropriateAge: "AGE", href: "link"})
+          this.setState({ parks: res.data})
           // console.log(res.data)
         )
         .catch(err => console.log(err));
@@ -65,31 +71,15 @@ class Preview extends Component {
 
   render() {
     return (
-        // <ul>
-        //     <li className="list-group-item box1">
-        //     <Container>
-        //         <Row>
-        //         <Col size="lg-4 lg-6">
-        //     <Thumbnail src={thumbnail} />
-        //   </Col>
-        //   <Col size="lg-4 lg-4">
-        //   <p>{this.state.title}</p>
-        //   <a rel="noreferrer noopener" target="_blank" href={this.state.href}>
-        //      <h1 style={{ color: 'white'}}>Link to the park page</h1> 
-        //     </a>
-        //         <p>{this.state.summary}</p>
-        //         <p>{this.state.appropriateAge}</p>
-        //         <p>{starRating}</p>
-        //   </Col>
-        //         </Row>
-        //     </Container>
-                
-        //     </li>
-        // </ul>
+        <div>
+        <Review btnClick={this.filterBtn}/>
         <div className= "preview-item">
         {this.state.parks.length ? (
           <List>
-            {this.state.parks.map(park => (
+            {this.state.parks.filter(park => 
+             // "if false within range, return true.  if not, return false, default is true"
+               this.state.appropriateAge.length === 0 ? true : park.age >= this.state.appropriateAge[0] && park.age <= this.state.appropriateAge[1]
+            ).map(park => (
               <ListItem key={park._id}>
                 <div className="clearfix img-holder">
                 <img src={park.image}/>
@@ -116,6 +106,7 @@ class Preview extends Component {
         ) : (
           <h3>No Results to Display</h3>
         )}
+        </div>
         </div>
 
 
