@@ -1,10 +1,7 @@
 import React, {Component} from "react";
 import "./style.css"
-// import Thumbnail from "../Thumbnail";
-import { Container, Row, Col } from "../Grid";
 import API from "../../utils/API";
 import {List, ListItem} from "../List";
-import {Link} from "react-router-dom";
 import ParkDetails from "../Modal";
 import { Button } from 'react-bootstrap';
 import Review from "../Review";
@@ -48,25 +45,6 @@ class Preview extends Component {
       .then(res => this.loadParks())
       .catch(err => console.log(err));
   };
-
-  // handleInputChange = event => {
-  //   const { name, value } = event.target;
-  //   this.setState({
-  //     [name]: value
-  //   });
-  // };
-
-  // handleFormSubmit = event => {
-  //   event.preventDefault();
-  //   if (this.state.title && this.state.author) {
-  //     API.savePark({
-  //       title: this.state.title,
-  //       author: this.state.author,
-  //       synopsis: this.state.synopsis
-  //     })
-  //       .then(res => this.loadParks())
-  //       .catch(err => console.log(err));
-  //   }
 
 
   render() {

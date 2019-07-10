@@ -1,6 +1,4 @@
 import React from "react";
-// import "./Login.css";
-// import {Animated} from "react-animated-css";
 import "./style.css";
 import Nav from "../Nav";
 import { Link, Redirect } from "react-router-dom";
