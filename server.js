@@ -93,7 +93,7 @@ app.use(session({
 	resave: false, //required
 	saveUninitialized: true, //required
 	store: new mongoStore({
-		url: "mongodb://localhost/parkdb",
+		url: process.env.MONGODB_URI || "mongodb://localhost/parkdb",
 		collection: 'session'
 	})
 }));
