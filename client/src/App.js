@@ -43,6 +43,8 @@ class App extends Component {
           loggedIn: true,
           username: response.data.user.username
         });
+        console.log(`My App.js state variables username: ${this.state.username}`);
+        console.log(`My App.js state variables loggedIn: ${this.state.loggedIn}`);
       } else {
         console.log(`getUser: There is no saved user`);
         this.setState({
@@ -59,8 +61,8 @@ class App extends Component {
       <div className="App">
           <Router>
             <div>
-              {this.state.loggedIn && <p>Welcome, {this.state.username}</p>}
-              <Route exact path="/" render={(props) => <Home {...props} />} />
+              {/* {this.state.loggedIn && <p>Welcome, {this.state.username}</p>} */}
+              <Route exact path="/" render={() => <Home {...this.state} updateUser={this.updateUser} />} />
               {/* <Route exact path="/" component={Home} /> */}
               <Route exact path="/parksubmit" component={ParkSubmit} />
               <Route exact path="/login" render={() => <Login updateUser={this.updateUser} />} />

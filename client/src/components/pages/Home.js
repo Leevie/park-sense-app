@@ -7,18 +7,21 @@ import "./style.css";
 import { Container } from "../Grid";
 
 
-function Home() {
+function Home(props) {
+  console.log(`My Home Props: ${props}`);
+  console.log(`My Home Props username: ${props.username}`);
+  console.log(`My Home Props loggedIn: ${props.loggedIn}`);
+  console.log(`My Home Props function: ${props.updateUser}`)
   return (
     <div>
-    <NavBar/>
-    <Container>
-    <Jumbotron/>
-    {/* <Review/> */}
-    <Preview/>
-    </Container>
-    <Footer/>
+      <NavBar username={props.username} loggedIn={props.loggedIn} updateUser={props.updateUser} />
+      {/* <NavBar /> */}
+      <Container>
+        <Jumbotron />
+        <Preview />
+      </Container>
+      <Footer />
     </div>
-    
   );
 }
 
