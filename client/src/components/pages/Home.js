@@ -14,7 +14,7 @@ function Home() {
     <NavBar/>
     <Container>
     <Jumbotron/>
-    <Review/>
+    {/* <Review/> */}
     <Preview/>
     </Container>
     <Footer/>
