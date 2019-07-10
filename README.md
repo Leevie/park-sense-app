@@ -1,5 +1,5 @@
 # Parkify
-Project 3
+
 
 
 ## Demo
@@ -7,11 +7,11 @@ Here is a working live demo :  https://park-rangers.herokuapp.com/
 
 ![Home Page](home.JPG)
 
-# WebApp
+## WebApp
 <table>
 <tr>
 <td>
-A webapp using MongoDB. The app allows the user to either sign-in to their current account or to create a new account. Once an account is made, the user is able to search for and review various parks around their local area. Users are able to search for playgrounds and parks within specific age ranges that would be appropriate for their children. The user can upload pictures, reviews, and comment on whether or not they recommend the park and for what age groups it would be most appropriate. Think of it as a yelp for parks and playgrounds!
+A webapp using MongoDB. The app allows the user to either sign-in to their current account or to create a new account. Once an account is made, the user is able to search for and review various parks around their local area. Users are able to search for playgrounds and parks within specific age ranges that would be appropriate for their children. The user can upload pictures, reviews, and comment on whether or not they recommend the park and for what age groups it would be most appropriate. Think of it as a 'Yelp' for parks and playgrounds!
 </td>
 </tr>
 </table>
@@ -35,17 +35,21 @@ The makers of the app wanted to create a way for neighbors to communicate with e
 </table>
 
 
-## Technology
+## Technology  
 
 The app utilizes tools such as:
-* mongojs
+* MongoDB
 * Mongoose
 * Passport
 * Axios
 * Express
-* React
+* AJAX
+* Node.js
 
+## Built with  
 
+[React](https://reactjs.org/) - A JavaScript library for building user interfaces.  
+[Bootstrap](http://getbootstrap.com/) - Extensive list of components and  Bundled Javascript plugins.
 
 
 
@@ -65,6 +69,7 @@ Still more to come as it is a work in progress. Going forward, we'd like to inco
 
 
 
+----
 
 
 ## Available Scripts
