@@ -39,6 +39,7 @@ class Preview extends Component {
         )
         .catch(err => console.log(err));
   }
+  
 
   deletePark = id => {
     API.deletePark(id)
@@ -60,13 +61,12 @@ class Preview extends Component {
             ).map(park => (
               <ListItem key={park._id}>
                 <div className="clearfix img-holder">
-                <img src={park.image}/>
+                <img src={park.image === "" ? dImage : park.image} alt=""/>
                 </div>
                 <span className="preview-span">
-                    {/* <Link to={"/parks/" + park._id}> */}
                       <ParkDetails 
                         name={park.parkName}
-                        image={park.image}
+                        image={park.image === "" ? dImage : park.image}
                         description={park.description}
                         age={park.age}
                        />
