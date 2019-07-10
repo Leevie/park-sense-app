@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import { Modal } from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
 import {Link} from "react-router-dom";
 import "./style.css";
 
@@ -45,7 +44,7 @@ class ParkDetails extends Component {
             </Modal.Header>
             <Modal.Body>
                 <div className="modal-image">
-                <img src={image}/>
+                <img src={image} alt=""/>
                 </div>
                 <br/>
                 <p>
