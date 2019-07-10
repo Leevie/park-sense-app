@@ -143,11 +143,6 @@ class ParkSubmit extends Component {
             value={this.state.age}
             onChange={this.handleInputChange}
           />
-          <br>
-          </br>
-          <p>Upload Images</p>
-          <input type="file" onChange={this.fileChangedHandler} />
-          <button onClick={this.uploadHandler}>Upload!</button>
           <br></br>
           <br></br>
           <button onClick={this.handleFormSubmit}>Submit</button>
