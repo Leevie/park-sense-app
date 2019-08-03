@@ -2,6 +2,7 @@ import React from "react";
 import "./style.css";
 import Nav from "../Nav";
 import { Link, Redirect } from "react-router-dom";
+import { Modal } from "react-bootstrap";
 import axios from "axios";
 
 
@@ -12,11 +13,13 @@ class Login extends React.Component {
         this.state = {
             username: '',
             password: '',
-            redirectTo: null
+            redirectTo: null,
+            showModal: false
         }
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
-
+        this.handleHide = () => { this.setState({ showModal: false })};
+        this.handleShow = () => { this.setState({ showModal: true })};
     }
 
     handleChange(event) {
@@ -51,7 +54,10 @@ class Login extends React.Component {
             }).catch(error => {
                 console.log('login error: ')
                 console.log(error);
-
+                console.log(`My show modal before update: ${this.state.showModal}`);
+                this.setState({ showModal: true });
+                this.handleShow();
+                console.log(`My show modal: ${this.state.showModal}`);
             })
     }
     render() {
@@ -60,6 +66,21 @@ class Login extends React.Component {
         } else {
             return (
                 <div>
+                    <Modal className="park-details"
+                        size="lg"
+                        show={this.state.showModal}
+                        onHide={this.handleHide}
+                        dialogClassName="modal-xl"
+                        aria-labelledby="example-custom-modal-styling-title"
+                        backdrop="static"
+                    >
+                        <Modal.Header closeButton>
+                            <Modal.Title>Error</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            <strong>Invalid username/password combination!</strong>
+                        </Modal.Body>
+                    </Modal>
                     <Nav />
                     <div className="container">
                         <div className="row">
@@ -113,7 +134,6 @@ class Login extends React.Component {
                         </div>
                     </div>
                 </div>
-
             );
         };
     }
