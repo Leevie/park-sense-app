@@ -7,10 +7,10 @@ mongoose.promise = Promise;
 // Define userSchema
 const userSchema = new Schema({
 
-	username: { type: String, unique: false, required: false },
-	password: { type: String, unique: false, required: false }
+	username: { type: String, unique: true, required: true },
+	password: { type: String, unique: false, required: true }
 
-})
+});
 
 // Define schema methods
 userSchema.methods = {
@@ -33,7 +33,7 @@ userSchema.pre('save', function (next) {
 		this.password = this.hashPassword(this.password)
 		next()
 	}
-})
+});
 // Set up user using our model
 let User = mongoose.model("User", userSchema);
 
